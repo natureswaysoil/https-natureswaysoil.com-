@@ -13,7 +13,7 @@ export default function CheckoutForm() {
     e.preventDefault();
     if (!stripe || !elements) return;
     setLoading(true);
-    const result: any = await stripe.confirmPayment({
+    const result: ConfirmPaymentResult = await stripe.confirmPayment({
       elements,
       confirmParams: {
         return_url: window.location.origin + '/checkout?status=success',
