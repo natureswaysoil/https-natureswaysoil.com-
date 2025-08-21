@@ -8,6 +8,7 @@ export type Product = {
   price: number;
   active: boolean;
   sku: string;
+  image: string;
 };
 
 const products = productsData as Product[];

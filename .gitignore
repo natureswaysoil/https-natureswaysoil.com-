@@ -3,5 +3,5 @@ node_modules
 .env
 
 # generated files
-/data/products.json
+# /data/products.json
 

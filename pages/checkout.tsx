@@ -9,14 +9,16 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY 
 export default function CheckoutPage() {
   const [clientSecret, setClientSecret] = useState('');
   const [product, setProduct] = useState<Product | null>(null);
+  const [status, setStatus] = useState('');
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const slug = params.get('slug') || '';
     const qty = params.get('qty') || '1';
+    setStatus(params.get('status') || '');
     const prod = getProduct(slug);
     setProduct(prod || null);
-    if (slug) {
+    if (slug && !params.get('status')) {
       fetch(`/api/stripe/create-intent?slug=${slug}&qty=${qty}`)
         .then((res) => res.json())
         .then((data) => setClientSecret(data.clientSecret));
@@ -30,10 +32,14 @@ export default function CheckoutPage() {
   return (
     <div className="p-8 max-w-md mx-auto">
       <h1 className="text-xl font-semibold mb-4">Checkout — {product.title}</h1>
-      {clientSecret && (
-        <Elements stripe={stripePromise} options={{ clientSecret }}>
-          <CheckoutForm />
-        </Elements>
+      {status === 'success' ? (
+        <p>Thank you for your purchase!</p>
+      ) : (
+        clientSecret && (
+          <Elements stripe={stripePromise} options={{ clientSecret }}>
+            <CheckoutForm />
+          </Elements>
+        )
       )}
     </div>
   );
