@@ -6,25 +6,49 @@ export default function CheckoutForm() {
   const elements = useElements();
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!stripe || !elements) return;
     setLoading(true);
-    const { error } = await stripe.confirmPayment({
+    const result: any = await stripe.confirmPayment({
       elements,
       confirmParams: {
         return_url: window.location.origin + '/checkout?status=success',
       },
     });
-    if (error) {
-      setMessage(error.message || 'An unexpected error occurred.');
+    if (result.error) {
+      setMessage(result.error.message || 'An unexpected error occurred.');
+    } else if (result.paymentIntent) {
+      await fetch('/api/order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ orderId: result.paymentIntent.id, name, email }),
+      });
     }
     setLoading(false);
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <input
+        type="text"
+        required
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className="border p-2 w-full"
+      />
+      <input
+        type="email"
+        required
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="border p-2 w-full"
+      />
       <PaymentElement />
       <button
         type="submit"
