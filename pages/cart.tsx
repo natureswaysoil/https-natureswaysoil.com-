@@ -5,7 +5,11 @@ import { getProduct } from '@/lib/cart';
 
 export default function CartPage() {
   const { items, clear } = useCart();
-  const [products, setProducts] = useState<any[]>([]);
+import { getProduct, Product } from '@/lib/cart';
+
+export default function CartPage() {
+  const { items, clear } = useCart();
+  const [products, setProducts] = useState<(Product & { qty: number })[]>([]);
 
   useEffect(() => {
     const list = items
