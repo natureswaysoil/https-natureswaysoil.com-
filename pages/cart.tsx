@@ -18,7 +18,7 @@ export default function CartPage() {
         if (!prod) return null;
         return { ...prod, qty: i.qty };
       })
-      .filter(Boolean) as any[];
+      .filter(Boolean) as CartProduct[];
     setProducts(list);
   }, [items]);
 
