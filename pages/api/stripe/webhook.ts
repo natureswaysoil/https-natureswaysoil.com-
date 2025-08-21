@@ -30,9 +30,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   // Handle the event
   switch (event.type) {
-    case 'payment_intent.succeeded':
-      console.log('Payment succeeded', event.data.object);
+    case 'payment_intent.succeeded': {
+      const intent = event.data.object as Stripe.PaymentIntent;
+      try {
+        await fetch(`${process.env.SUPABASE_URL}/rest/v1/orders`, {
+          method: 'POST',
+          headers: {
+            apikey: process.env.SUPABASE_SERVICE_ROLE_KEY || '',
+            Authorization: `Bearer ${process.env.SUPABASE_SERVICE_ROLE_KEY || ''}`,
+            'Content-Type': 'application/json',
+            Prefer: 'return=minimal',
+          },
+          body: JSON.stringify({
+            order_id: intent.id,
+            name: intent.shipping?.name || '',
+            email: intent.receipt_email || '',
+          }),
+        });
+      } catch (e) {
+        console.error('Failed to store order in Supabase', e);
+      }
       break;
+    }
     default:
       console.log(`Unhandled event type ${event.type}`);
   }
