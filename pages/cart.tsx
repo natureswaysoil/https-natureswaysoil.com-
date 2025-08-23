@@ -3,13 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getProduct, Product } from '@/lib/cart';
 
+// Extend the Product type to include qty
+type CartProduct = Product & { qty: number };
+
 export default function CartPage() {
-  // Example cart items from localStorage or context
   const [items, setItems] = useState<{ id: string, qty: number }[]>([]);
-  const [cartProducts, setCartProducts] = useState<Product[]>([]);
+  const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
 
   useEffect(() => {
-    // Replace this with your actual cart retrieval logic
     const stored = localStorage.getItem('cart');
     if (stored) {
       setItems(JSON.parse(stored));
@@ -17,16 +18,14 @@ export default function CartPage() {
   }, []);
 
   useEffect(() => {
-    // Fetch product details based on cart items
     async function fetchProducts() {
       const products = await Promise.all(
         items.map(async (item) => {
           const product = await getProduct(item.id);
-          return product ? { ...product, qty: item.qty } : null;
+          return product ? ({ ...product, qty: item.qty } as CartProduct) : null;
         })
       );
-      // Type assertion here fixes the TypeScript error
-      setCartProducts(products.filter(Boolean) as Product[]);
+      setCartProducts(products.filter(Boolean) as CartProduct[]);
     }
     if (items.length > 0) {
       fetchProducts();
