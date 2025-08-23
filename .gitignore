@@ -1,7 +1,16 @@
-node_modules
-.next
-.env
-
-# generated files
-/data/products.json
-
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/.gitignore b/.gitignore
+index 4f6c2833693d8a18a3ebcd2bf902895d726e1fdf..dcf145bb3595ddab21da8127e94d9dd4f1f5eedf 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,7 +1,6 @@
+ node_modules
+ .next
+ .env
+ 
+ # generated files
+-/data/products.json
+ 
+ 
+EOF
+)
