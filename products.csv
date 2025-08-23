@@ -1,19 +1,31 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a//dev/null b/products.csv
-index 0000000000000000000000000000000000000000..2276b4a0fb39d7faf85e177cb674ab899d85c156 100644
---- a//dev/null
-+++ b/products.csv
-@@ -0,0 +1,10 @@
-+Product ID,Title,Description,Selling Price,Active,SKU
-+1,Nature's Way Soil Liquid Humic & Fulvic Acid with Organic Kelp Concentrate Natural Soil Conditioner Plant Growth Stimulator 2.5 Gallon,Revive tired soil with a carbon-rich blend of humic and fulvic acids plus organic kelp. Enhances nutrient uptake stimulates microbial activity and boosts overall plant vigor.,69.99,TRUE,NWS-HUM-FUL-KELP-25GAL
-+2,Nature's Way Soil Organic Hydroponic Fertilizer Concentrate Made Fresh Weekly 32 oz,This organic concentrate yields up to 512 gallons of nutrient solution providing balanced nutrition for hydroponic or aquaponic setups. Safe and pet-friendly it supports rapid growth without harsh chemicals.,25.98,TRUE,NWS-HYDROP-32OZ
-+3,Nature's Way Soil Liquid Biochar with Kelp Humic & Fulvic Acid 1 Gallon,A premium soil conditioner combining activated biochar kelp and humic/fulvic acids to supercharge microbial life and nutrient retention. Ideal for gardens and lawns seeking better water holding and long-term fertility.,89.95,TRUE,NWS-BIOCHAR-1GAL
-+4,Nature's Way Soil Organic Tomato Liquid Fertilizer 1 Gallon,Made fresh weekly with Vitamin B-1 and aloe vera this concentrate encourages stronger roots healthier transplants and prevents blossom end rot. Tailored nutrients help produce abundant tasty tomatoes.,29.99,TRUE,NWS-TOMATO-1GAL
-+5,Nature's Way Soil Hay Pasture & Lawn Fertilizer 2.5 Gallons,A pet-safe microbial nitrogen blend that naturally feeds grass turf and forage. Supports sustained growth greener lawns and improved soil structure.,99.99,TRUE,NWS-HAY-PASTURE-25GAL
-+6,Nature's Way Soil Enhanced Living Compost,Features fermented duckweed extract 20% worm castings 20% activated biochar and 60% weed-free compost. A powerful amendment that enriches soil biology and stimulates root development.,29.98,TRUE,NWS-LIVING-COMPOST
-+7,Nature's Way Soil Liquid Bone Meal Fertilizer 1 Gallon,Fast-absorbing liquid bone meal delivering 25% hydrolyzed bone meal 5% calcium and 10% phosphorus (P₂O₅). Promotes healthy roots and strong flowering for vegetables trees and shrubs.,39.99,TRUE,NWS-BONEMEAL-1GAL
-+8,Nature's Way Soil Organic Liquid Fertilizer for Garden and House Plants 1 Gallon,A USDA biobased 100% organic formula fortified with B vitamins and aloe vera. Boosts transplants and overall plant vigor while remaining gentle and environmentally friendly.,20.24,TRUE,NWS-GARDEN-1GAL
-+9,Nature's Way Soil Liquid Kelp Fertilizer 32 Ounce,Cold-processed seaweed extract that acts as a natural growth booster and soil revitalizer. Suitable for lawns gardens flowers and vegetables improving stress tolerance and root strength.,24.99,TRUE,NWS-KELP-32OZ
+
+diff --git a/Products (10).csv	 b/Products (10).csv	
+index 9faedd8661d5f6a62906664b64c10eb1a388082c..86192f38bcf427d65861449ee730550f9e1376ca 100644
+--- a/Products (10).csv	
++++ b/Products (10).csv	
+@@ -1,11 +1,11 @@
+-Product ID,Title,Description,Selling Price,Active,SKU
+-1,Nature's Way Soil Organic Liquid Fertilizer — 1 Gallon,Microbial-rich balanced fertilizer for gardens and lawns.,20.99,TRUE,NWS-128-ORG
+-2,Organic Tomato Liquid Fertilizer — 1 Gallon,Tomato-focused nutrients with beneficial microbes.,24.99,TRUE,NWS-128-TOM
+-3,Liquid Kelp Fertilizer — 1 Gallon,Seaweed extract for root vigor and stress tolerance.,29.99,TRUE,NWS-128-KELP
+-4,Premium Soil Blend — 2 Cubic Feet,Biochar-enriched organic soil mix with mycorrhizae.,39.99,TRUE,NWS-CF2-PREM
+-5,Worm Casting Fertilizer — 1 Gallon,Pure worm castings liquid for organic growing.,22.99,TRUE,NWS-128-WORM
+-6,Root Booster Organic — 32 oz,Concentrated root development formula.,18.99,TRUE,NWS-32-ROOT
+-7,Garden Starter Kit — Complete Set,Everything you need to start an organic garden.,49.99,FALSE,NWS-KIT-STRT
+-8,Compost Tea Blend — 1 Gallon,Living soil amendment with beneficial bacteria.,26.99,TRUE,NWS-128-TEA
+-9,Organic Lawn Food — 2 Gallon,Slow-release nutrients for healthy grass.,34.99,TRUE,NWS-256-LAWN
+-10,Soil pH Balancer — 16 oz,Natural pH adjustment for optimal plant growth.,15.99,TRUE,NWS-16-PH
++Product ID,Title,Description,Selling Price,Active,SKU,Variations
++1,Nature's Way Soil Dog Urine Neutralizer & Lawn Revitalizer 32oz,Enzyme spray repairs yellow spots and revives lawns,29.98,TRUE,NWS-DOG-URINE-32OZ,32oz:29.98
++2,Nature's Way Soil Liquid Kelp Fertilizer 32oz,Cold processed seaweed extract boosts growth,24.99,TRUE,NWS-LIQ-KELP-32OZ,16oz:16.99;32oz:24.99;64oz:44.99
++3,Nature's Way Soil Organic Tomato Liquid Fertilizer 1gal,Vitamin B1 and aloe for strong roots and transplants,29.99,TRUE,NWS-TOMATO-1GAL,32oz:20.99;1gal:29.99
++4,Nature's Way Soil Organic Liquid Fertilizer for Garden and House Plants 1gal,USDA biobased blend with B vitamins and aloe,20.26,TRUE,NWS-GARDEN-HOUSE-1GAL,32oz:14.99;1gal:20.26
++5,Nature's Way Soil Liquid Bone Meal Fertilizer 1gal,Fast absorbing phosphorus and calcium for roots,39.99,TRUE,NWS-LIQ-BONE-1GAL,32oz:24.99;1gal:39.99
++6,Nature's Way Soil Organic Hydroponic Fertilizer Concentrate 32oz,Organic concentrate makes 512 gallons of solution,25.98,TRUE,NWS-HYDRO-32OZ,32oz:25.98;64oz:44.99
++7,Nature's Way Soil Enhanced Living Compost,Duckweed extract worm castings biochar and compost,29.98,TRUE,NWS-LIVING-COMPOST,1cuft:29.98
++8,Nature's Way Soil Hay Pasture & Lawn Fertilizer 2.5gal,Pet safe microbial nitrogen blend for turf and forage,99.99,TRUE,NWS-HAY-PASTURE-25GAL,1gal:66.99;2.5gal:99.99
++9,Nature's Way Soil Seaweed & Humic Acid Lawn Treatment 32oz,Kelp and humic acid blend revitalizes soil,32.29,TRUE,NWS-SEAWEED-HUMIC-32OZ,32oz:32.29;1gal:64.99
++10,Nature's Way Soil Liquid Humic & Fulvic Acid with Organic Kelp 2.5gal,Humic and fulvic acids with kelp stimulate growth,69.99,TRUE,NWS-HUMIC-FULVIC-KELP-25GAL,32oz:24.99;1gal:39.99;2.5gal:69.99
  
 EOF
 )
