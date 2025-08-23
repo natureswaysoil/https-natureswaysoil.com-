@@ -25,7 +25,8 @@ export default function CartPage() {
           return product ? { ...product, qty: item.qty } : null;
         })
       );
-      setCartProducts(products.filter(Boolean));
+      // Type assertion here fixes the TypeScript error
+      setCartProducts(products.filter(Boolean) as Product[]);
     }
     if (items.length > 0) {
       fetchProducts();
