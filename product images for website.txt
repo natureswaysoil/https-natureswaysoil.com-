@@ -460,3 +460,57 @@ index 34b2b93a400acd9b9118d93f1e06ba401bf59d3f..01c5dcf145b53ee27aca9b5557930636
  
 EOF
 )
+diff --git a/product images for website.txt	 b/product images for website.txt	
+index 46d78bf97b238a9a60556dfdb61a3ae521bde63d..7b24d084fdc33f3ac47007e288fe0532fe3d7962 100644
+--- a/product images for website.txt	
++++ b/product images for website.txt	
+@@ -1,34 +1,14 @@
+- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+-diff --git a/product images for website.txt	 b/product images for website.txt	
+-index 80d8991ee2da4a45d179de883ed9137053fc6c0c..7b24d084fdc33f3ac47007e288fe0532fe3d7962 100644
+---- a/product images for website.txt	
+-+++ b/product images for website.txt	
+-@@ -1,14 +1,14 @@
+- Product images for website mapping (in order matching CSV Product ID):
+- 
+--1. /products/organic-liquid-1gal.jpg
+--2. /products/tomato-1gal.jpg  
+--3. /products/kelp-1gal.jpg
+--4. /products/premium-soil-2cf.jpg
+--5. /products/worm-casting-1gal.jpg
+--6. /products/root-booster-32oz.jpg
+--7. /products/starter-kit.jpg
+--8. /products/compost-tea-1gal.jpg
+--9. /products/lawn-food-2gal.jpg
+--10. /products/ph-balancer-16oz.jpg
+-+1. /products/dog-urine-neutralizer-32oz.jpg
+-+2. /products/liquid-kelp-32oz.jpg
+-+3. /products/organic-tomato-liquid-1gal.jpg
+-+4. /products/organic-liquid-garden-house-1gal.jpg
+-+5. /products/liquid-bone-meal-1gal.jpg
+-+6. /products/organic-hydroponic-fertilizer-32oz.jpg
+-+7. /products/enhanced-living-compost.jpg
+-+8. /products/hay-pasture-lawn-fertilizer-25gal.jpg
+-+9. /products/seaweed-humic-lawn-32oz.jpg
+-+10. /products/liquid-humic-fulvic-kelp-25gal.jpg
+- 
+--Note: Products without images will use '/placeholder-product.png' as fallback.
+-+Note: Products without images will use '/placeholder-product.png' as fallback.
+- 
+-EOF
+-)
++Product images for website mapping (in order matching CSV Product ID):
++
++1. /products/dog-urine-neutralizer-32oz.jpg
++2. /products/liquid-kelp-32oz.jpg
++3. /products/organic-tomato-liquid-1gal.jpg
++4. /products/organic-liquid-garden-house-1gal.jpg
++5. /products/liquid-bone-meal-1gal.jpg
++6. /products/organic-hydroponic-fertilizer-32oz.jpg
++7. /products/enhanced-living-compost.jpg
++8. /products/hay-pasture-lawn-fertilizer-25gal.jpg
++9. /products/seaweed-humic-lawn-32oz.jpg
++10. /products/liquid-humic-fulvic-kelp-25gal.jpg
++
++Note: Products without images will use '/placeholder-product.png' as fallback.
+
