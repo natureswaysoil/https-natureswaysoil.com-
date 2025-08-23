@@ -7,13 +7,16 @@ import { getProduct, Product } from '@/lib/cart';
 type CartProduct = Product & { qty: number };
 
 export default function CartPage() {
-  const [items, setItems] = useState<{ id: string, qty: number }[]>([]);
+  const [items, setItems] = useState<{ id: string; qty: number }[]>([]);
   const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
 
   useEffect(() => {
-    const stored = localStorage.getItem('cart');
-    if (stored) {
-      setItems(JSON.parse(stored));
+    // SSR safety: localStorage only available in browser
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('cart');
+      if (stored) {
+        setItems(JSON.parse(stored));
+      }
     }
   }, []);
 
@@ -22,7 +25,7 @@ export default function CartPage() {
       const products = await Promise.all(
         items.map(async (item) => {
           const product = await getProduct(item.id);
-          return product ? ({ ...product, qty: item.qty } as CartProduct) : null;
+          return product ? { ...product, qty: item.qty } : null;
         })
       );
       setCartProducts(products.filter(Boolean) as CartProduct[]);
