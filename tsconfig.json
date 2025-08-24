@@ -1,24 +1,56 @@
-{
-  "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
-}
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/tsconfig.json b/tsconfig.json
+index 22460f0bf39133d4509901af609d778ab6043da4..6c4d8909df160812eadf30309308b563c07f56ae 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -1,24 +1,41 @@
+ {
+   "compilerOptions": {
+     "target": "es5",
+-    "lib": ["dom", "dom.iterable", "esnext"],
++    "lib": [
++      "dom",
++      "dom.iterable",
++      "esnext"
++    ],
+     "allowJs": true,
+     "skipLibCheck": true,
+     "strict": true,
+     "noEmit": true,
+     "esModuleInterop": true,
+     "module": "esnext",
+     "moduleResolution": "node",
+     "resolveJsonModule": true,
+     "isolatedModules": true,
+     "jsx": "preserve",
+     "incremental": true,
+-
+     "baseUrl": ".",
+     "paths": {
+-      "@/*": ["./*"]
+-    }
++      "@/*": [
++        "./*"
++      ]
++    },
++    "plugins": [
++      {
++        "name": "next"
++      }
++    ]
+   },
+-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+-  "exclude": ["node_modules"]
++  "include": [
++    "next-env.d.ts",
++    "**/*.ts",
++    "**/*.tsx",
++    ".next/types/**/*.ts"
++  ],
++  "exclude": [
++    "node_modules"
++  ]
+ }
+ 
+EOF
+)
