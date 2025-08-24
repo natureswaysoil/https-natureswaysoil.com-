@@ -1,445 +1,96 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/scripts/generate-products.js b/scripts/generate-products.js
-index c993664d1128547420018b650c1446cf7cce8817..4d263464277945e5f489ebe4306f213036dba8c5 100644
---- a/scripts/generate-products.js
-+++ b/scripts/generate-products.js
-@@ -1,368 +1,68 @@
-- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
--diff --git a/scripts/generate-products.js b/scripts/generate-products.js
--index be26a3bcdbdbff4f56990a46b59264f2d87ae7cf..f754a9dde8ce8e1d8b7533a2e680b0c48b6c82b1 100644
----- a/scripts/generate-products.js
--+++ b/scripts/generate-products.js
--@@ -1,306 +1,53 @@
--- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
---diff --git a/scripts/generate-products.js b/scripts/generate-products.js
---index e8894c018ff90dc04896364ce5ec44f3d734ca67..f754a9dde8ce8e1d8b7533a2e680b0c48b6c82b1 100644
------ a/scripts/generate-products.js
---+++ b/scripts/generate-products.js
---@@ -1,245 +1,53 @@
---- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
----diff --git a/scripts/generate-products.js b/scripts/generate-products.js
----index 7ab9bf63634b1fe97dd17ac6082eaafbec14c2e8..f754a9dde8ce8e1d8b7533a2e680b0c48b6c82b1 100644
------- a/scripts/generate-products.js
----+++ b/scripts/generate-products.js
----@@ -1,59 +1,53 @@
----- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-----diff --git a/scripts/generate-products.js b/scripts/generate-products.js
-----index 3b1069248d1ebb1f4f7a3cc772a7cd88918b353b..36fba76d83e2f00c84804fa501bc47ee20c042b3 100644
-------- a/scripts/generate-products.js
-----+++ b/scripts/generate-products.js
-----@@ -5,41 +5,49 @@ const src = path.join(__dirname, '..', 'Products (10).csv');
----- const out = path.join(__dirname, '..', 'data', 'products.json');
----- const imagesSrc = path.join(__dirname, '..', 'product images for website.txt');
----- 
----- const raw = fs.readFileSync(src, 'utf8').trim();
----- const lines = raw.split(/\r?\n/).slice(1); // skip header
----- 
----- // Build an image mapping where the key is product ID and the value
----- // is an array of image paths. Lines in the mapping file are in the
----- // format `1. /path/to/image.jpg`.
----- const imageMap = {};
----- if (fs.existsSync(imagesSrc)) {
-----   const imgRaw = fs.readFileSync(imagesSrc, 'utf8');
-----   imgRaw.split(/\r?\n/).forEach((line) => {
-----     const match = line.match(/^\s*(\d+)\.\s*(.+)$/);
-----     if (match) {
-----       const id = Number(match[1]);
-----       const paths = match[2].split(/\s+/).filter(Boolean);
-----       if (paths.length) {
-----         imageMap[id] = paths;
-----       }
-----     }
-----   });
----- }
----- 
----- const products = lines.map((line) => {
------  const [id, title, description, price, active, sku] = line.split(',');
-----+  const [id, title, description, price, active, sku, variationsRaw = ''] = line.split(',');
-----+  const variations = variationsRaw
-----+    .split(';')
-----+    .filter(Boolean)
-----+    .map((entry) => {
-----+      const [name, vPrice] = entry.split(':');
-----+      return { name, price: Number(vPrice) };
-----+    });
-----   return {
-----     id: Number(id),
-----     slug: sku.toLowerCase(),
-----     title,
-----     description,
-----     price: Number(price),
-----     active: active === 'TRUE',
-----     sku,
-----     images: imageMap[Number(id)] || ['/placeholder-product.png'],
-----+    variations,
-----   };
----- });
----- 
----- fs.mkdirSync(path.dirname(out), { recursive: true });
----- fs.writeFileSync(out, JSON.stringify(products, null, 2));
----- console.log(`Generated ${products.length} products.`);
----- 
-----EOF
-----)
----+const fs = require('fs');
----+const path = require('path');
----+
----+const src = path.join(__dirname, '..', 'products.csv');
----+const out = path.join(__dirname, '..', 'data', 'products.json');
----+const imagesSrc = path.join(__dirname, '..', 'product images for website.txt');
----+
----+const raw = fs.readFileSync(src, 'utf8').trim();
----+const lines = raw.split(/\r?\n/).slice(1); // skip header
----+
----+// Build an image mapping where the key is product ID and the value
----+// is an array of image paths. Lines in the mapping file are in the
----+// format `1. /path/to/image.jpg`.
----+const imageMap = {};
----+if (fs.existsSync(imagesSrc)) {
----+  const imgRaw = fs.readFileSync(imagesSrc, 'utf8');
----+  imgRaw.split(/\r?\n/).forEach((line) => {
----+    const match = line.match(/^\s*(\d+)\.\s*(.+)$/);
----+    if (match) {
----+      const id = Number(match[1]);
----+      const paths = match[2].split(/\s+/).filter(Boolean);
----+      if (paths.length) {
----+        imageMap[id] = paths;
----+      }
----+    }
----+  });
----+}
----+
----+const products = lines.map((line) => {
----+  const [id, title, description, price, active, sku, variationsRaw = ''] = line.split(',');
----+  const variations = variationsRaw
----+    .split(';')
----+    .filter(Boolean)
----+    .map((entry) => {
----+      const [name, vPrice] = entry.split(':');
----+      return { name, price: Number(vPrice) };
----+    });
----+  return {
----+    id: Number(id),
----+    slug: sku.toLowerCase(),
----+    title,
----+    description,
----+    price: Number(price),
----+    active: active === 'TRUE',
----+    sku,
----+    images: imageMap[Number(id)] || ['/placeholder-product.png'],
----+    variations,
----+  };
----+});
----+
----+fs.mkdirSync(path.dirname(out), { recursive: true });
----+fs.writeFileSync(out, JSON.stringify(products, null, 2));
----+console.log(`Generated ${products.length} products.`);
---- 
----EOF
----)
----diff --git a/scripts/generate-products.js b/scripts/generate-products.js
----index 7ab9bf63634b1fe97dd17ac6082eaafbec14c2e8..e920a55d0afef4f0c7327fa23ea1df688eafeb7c 100644
------- a/scripts/generate-products.js
----+++ b/scripts/generate-products.js
----@@ -1,59 +1,59 @@
----- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-----diff --git a/scripts/generate-products.js b/scripts/generate-products.js
-----index 3b1069248d1ebb1f4f7a3cc772a7cd88918b353b..36fba76d83e2f00c84804fa501bc47ee20c042b3 100644
-------- a/scripts/generate-products.js
-----+++ b/scripts/generate-products.js
-----@@ -5,41 +5,49 @@ const src = path.join(__dirname, '..', 'Products (10).csv');
----- const out = path.join(__dirname, '..', 'data', 'products.json');
----- const imagesSrc = path.join(__dirname, '..', 'product images for website.txt');
----- 
----- const raw = fs.readFileSync(src, 'utf8').trim();
----- const lines = raw.split(/\r?\n/).slice(1); // skip header
----- 
----- // Build an image mapping where the key is product ID and the value
----- // is an array of image paths. Lines in the mapping file are in the
----- // format `1. /path/to/image.jpg`.
----- const imageMap = {};
----- if (fs.existsSync(imagesSrc)) {
-----   const imgRaw = fs.readFileSync(imagesSrc, 'utf8');
-----   imgRaw.split(/\r?\n/).forEach((line) => {
-----     const match = line.match(/^\s*(\d+)\.\s*(.+)$/);
-----     if (match) {
-----       const id = Number(match[1]);
-----       const paths = match[2].split(/\s+/).filter(Boolean);
-----       if (paths.length) {
-----         imageMap[id] = paths;
-----       }
-----     }
-----   });
----- }
----- 
----- const products = lines.map((line) => {
------  const [id, title, description, price, active, sku] = line.split(',');
-----+  const [id, title, description, price, active, sku, variationsRaw = ''] = line.split(',');
-----+  const variations = variationsRaw
-----+    .split(';')
-----+    .filter(Boolean)
-----+    .map((entry) => {
-----+      const [name, vPrice] = entry.split(':');
-----+      return { name, price: Number(vPrice) };
-----+    });
-----   return {
-----     id: Number(id),
-----     slug: sku.toLowerCase(),
-----     title,
-----     description,
-----     price: Number(price),
-----     active: active === 'TRUE',
-----     sku,
-----     images: imageMap[Number(id)] || ['/placeholder-product.png'],
-----+    variations,
-----   };
----- });
----- 
----- fs.mkdirSync(path.dirname(out), { recursive: true });
----- fs.writeFileSync(out, JSON.stringify(products, null, 2));
----- console.log(`Generated ${products.length} products.`);
----- 
-----EOF
-----)
----+const fs = require('fs');
----+const path = require('path');
----+
----+const src = path.join(__dirname, '..', 'products.csv');
----+const out = path.join(__dirname, '..', 'data', 'products.json');
----+const imagesSrc = path.join(__dirname, '..', 'product images for website.txt');
----+
----+const raw = fs.readFileSync(src, 'utf8').trim();
----+const lines = raw.split(/\r?\n/).slice(1); // skip header
----+
----+// Build an image mapping where the key is product ID and the value
----+// is an array of image paths. Lines in the mapping file are in the
----+// format `1. /path/to/image.jpg`.
----+const imageMap = {};
----+if (fs.existsSync(imagesSrc)) {
----+  const imgRaw = fs.readFileSync(imagesSrc, 'utf8');
----+  imgRaw.split(/\r?\n/).forEach((line) => {
----+    const match = line.match(/^\s*(\d+)\.\s*(.+)$/);
----+    if (match) {
----+      const id = Number(match[1]);
----+      const paths = match[2].split(/\s+/).filter(Boolean);
----+      if (paths.length) {
----+        imageMap[id] = paths;
----+      }
----+    }
----+  });
----+}
----+
----+const parseCSVLine = (str) =>
----+  str
----+    .match(/(".*?"|[^",]+)(?=,|$)/g)
----+    .map((s) => s.replace(/^"|"$/g, ''));
----+
----+const products = lines.map((line) => {
----+  const [id, title, description, price, active, sku, variationsRaw = ''] =
----+    parseCSVLine(line);
----+  const variations = variationsRaw
----+    .split(';')
----+    .filter(Boolean)
----+    .map((entry) => {
----+      const [name, vPrice] = entry.split(':');
----+      return { name, price: Number(vPrice) };
----+    });
----+  return {
----+    id: Number(id),
----+    slug: sku.toLowerCase(),
----+    title,
----+    description,
----+    price: Number(price),
----+    active: active === 'TRUE',
----+    sku,
----+    images: imageMap[Number(id)] || ['/placeholder-product.png'],
----+    variations,
----+  };
----+});
----+
----+fs.mkdirSync(path.dirname(out), { recursive: true });
----+fs.writeFileSync(out, JSON.stringify(products, null, 2));
----+console.log(`Generated ${products.length} products.`);
---+const fs = require('fs');
---+const path = require('path');
--- 
---+const src = path.join(__dirname, '..', 'products.csv');
---+const out = path.join(__dirname, '..', 'data', 'products.json');
---+const imagesSrc = path.join(__dirname, '..', 'product images for website.txt');
---+
---+const raw = fs.readFileSync(src, 'utf8').trim();
---+const lines = raw.split(/\r?\n/).slice(1); // skip header
---+
---+// Build an image mapping where the key is product ID and the value
---+// is an array of image paths. Lines in the mapping file are in the
---+// format `1. /path/to/image.jpg`.
---+const imageMap = {};
---+if (fs.existsSync(imagesSrc)) {
---+  const imgRaw = fs.readFileSync(imagesSrc, 'utf8');
---+  imgRaw.split(/\r?\n/).forEach((line) => {
---+    const match = line.match(/^\s*(\d+)\.\s*(.+)$/);
---+    if (match) {
---+      const id = Number(match[1]);
---+      const paths = match[2].split(/\s+/).filter(Boolean);
---+      if (paths.length) {
---+        imageMap[id] = paths;
---+      }
---+    }
---+  });
---+}
---+
---+const products = lines.map((line) => {
---+  const [id, title, description, price, active, sku, variationsRaw = ''] = line.split(',');
---+  const variations = variationsRaw
---+    .split(';')
---+    .filter(Boolean)
---+    .map((entry) => {
---+      const [name, vPrice] = entry.split(':');
---+      return { name, price: Number(vPrice) };
---+    });
---+  return {
---+    id: Number(id),
---+    slug: sku.toLowerCase(),
---+    title,
---+    description,
---+    price: Number(price),
---+    active: active === 'TRUE',
---+    sku,
---+    images: imageMap[Number(id)] || ['/placeholder-product.png'],
---+    variations,
---+  };
---+});
---+
---+fs.mkdirSync(path.dirname(out), { recursive: true });
---+fs.writeFileSync(out, JSON.stringify(products, null, 2));
---+console.log(`Generated ${products.length} products.`);
--- 
---EOF
---)
--+const fs = require('fs');
--+const path = require('path');
--+
--+const src = path.join(__dirname, '..', 'products.csv');
--+const out = path.join(__dirname, '..', 'data', 'products.json');
--+const imagesSrc = path.join(__dirname, '..', 'product images for website.txt');
--+
--+const raw = fs.readFileSync(src, 'utf8').trim();
--+const lines = raw.split(/\r?\n/).slice(1); // skip header
--+
--+// Build an image mapping where the key is product ID and the value
--+// is an array of image paths. Lines in the mapping file are in the
--+// format `1. /path/to/image.jpg`.
--+const imageMap = {};
--+if (fs.existsSync(imagesSrc)) {
--+  const imgRaw = fs.readFileSync(imagesSrc, 'utf8');
--+  imgRaw.split(/\r?\n/).forEach((line) => {
--+    const match = line.match(/^\s*(\d+)\.\s*(.+)$/);
--+    if (match) {
--+      const id = Number(match[1]);
--+      const paths = match[2].split(/\s+/).filter(Boolean);
--+      if (paths.length) {
--+        imageMap[id] = paths;
--+      }
--+    }
--+  });
--+}
--+
--+const products = lines.map((line) => {
--+  const [id, title, description, price, active, sku, variationsRaw = ''] = line.split(',');
--+  const variations = variationsRaw
--+    .split(';')
--+    .filter(Boolean)
--+    .map((entry) => {
--+      const [name, vPrice] = entry.split(':');
--+      return { name, price: Number(vPrice) };
--+    });
--+  return {
--+    id: Number(id),
--+    slug: sku.toLowerCase(),
--+    title,
--+    description,
--+    price: Number(price),
--+    active: active === 'TRUE',
--+    sku,
--+    images: imageMap[Number(id)] || ['/placeholder-product.png'],
--+    variations,
--+  };
--+});
--+
--+fs.mkdirSync(path.dirname(out), { recursive: true });
--+fs.writeFileSync(out, JSON.stringify(products, null, 2));
--+console.log(`Generated ${products.length} products.`);
-- 
--EOF
--)
-+'use strict';
-+
-+const fs = require("fs");
-+const path = require("path");
-+
-+// Input CSV and auxiliary mapping files.
-+const csvPath = path.join(__dirname, "..", "products.csv");
-+const outPath = path.join(__dirname, "..", "data", "products.json");
-+const imagesSrc = path.join(__dirname, "..", "product images for website.txt");
-+
-+// Read CSV and ignore empty lines while skipping header.
-+if (!fs.existsSync(csvPath)) {
-+  console.error(`Missing products.csv at ${csvPath}`);
-+  process.exit(1);
-+}
-+const raw = fs.readFileSync(csvPath, "utf8").trim();
-+const lines = raw
-+  .split(/\r?\n/)
-+  .filter(Boolean) // drop empty lines
-+  .slice(1); // remove header
-+
-+// Build an image mapping where the key is product ID and the value
-+// is an array of image paths. Lines in the mapping file are in the
-+// format `1. /path/to/image.jpg`.
-+const imageMap = {};
-+if (fs.existsSync(imagesSrc)) {
-+  const imgRaw = fs.readFileSync(imagesSrc, "utf8");
-+  imgRaw.split(/\r?\n/).forEach((line) => {
-+    const match = line.match(/^\s*(\d+)\.\s*(.+)$/);
-+    if (match) {
-+      const id = Number(match[1]);
-+      const paths = match[2].split(/\s+/).filter(Boolean);
-+      if (paths.length) {
-+        imageMap[id] = paths;
-+      }
-+    }
-+  });
-+}
-+
-+const products = lines.map((line) => {
-+  const [id, title, description, price, active, sku, variationsRaw = ""] =
-+    line.split(",");
-+
-+  const variations = variationsRaw
-+    .split(";")
-+    .filter(Boolean)
-+    .map((entry) => {
-+      const [name, vPrice] = entry.split(":");
-+      return { name, price: Number(vPrice) };
-+    });
-+
-+  return {
-+    id: Number(id),
-+    slug: sku.toLowerCase(),
-+    title,
-+    description,
-+    price: Number(price),
-+    active: active === "TRUE",
-+    sku,
-+    images: imageMap[Number(id)] || ["/placeholder-product.png"],
-+    variations,
-+  };
-+});
-+
-+fs.mkdirSync(path.dirname(outPath), { recursive: true });
-+fs.writeFileSync(outPath, JSON.stringify(products, null, 2));
-+console.log(`Generated ${products.length} products.`);
-+
- 
-EOF
-)
+# from *any* folder inside your repo
+mkdir -p scripts
+
+cat > scripts/generate-products.js <<'JS'
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * Input files (relative to repo root)
+ * - products.csv  (header row + rows: id,title,description,price,active,sku,variations)
+ * - product images for website.txt  (lines like: "12. /img/a.jpg /img/b.jpg")
+ * Output:
+ * - data/products.json
+ */
+
+const csvPath   = path.join(__dirname, '..', 'products.csv');
+const mapPath   = path.join(__dirname, '..', 'product images for website.txt');
+const outPath   = path.join(__dirname, '..', 'data', 'products.json');
+
+if (!fs.existsSync(csvPath)) {
+  console.error(`Missing products.csv at ${csvPath}`);
+  process.exit(1);
+}
+
+// Read CSV (keep header to slice off), ignore blank lines
+const csv = fs.readFileSync(csvPath, 'utf8').replace(/\r/g, '');
+const rows = csv.split('\n').filter(Boolean);
+const dataRows = rows.slice(1); // drop header
+
+// Minimal CSV parser: splits on commas but respects "quoted, fields"
+const parseCSVLine = (line) =>
+  (line.match(/("([^"]|"")*"|[^,]+)|(?<=,)(?=,)|^$/g) || [])
+    .map((cell) => (cell || '').trim())
+    .map((cell) =>
+      cell.startsWith('"') && cell.endsWith('"')
+        ? cell.slice(1, -1).replace(/""/g, '"')
+        : cell
+    );
+
+// Build image map: "123. /a.jpg /b.jpg"
+const imageMap = {};
+if (fs.existsSync(mapPath)) {
+  const mapRaw = fs.readFileSync(mapPath, 'utf8').replace(/\r/g, '');
+  mapRaw.split('\n').forEach((line) => {
+    const m = line.match(/^\s*(\d+)\.\s*(.+)$/);
+    if (!m) return;
+    const id = Number(m[1]);
+    const paths = m[2].split(/\s+/).filter(Boolean);
+    if (paths.length) imageMap[id] = paths;
+  });
+}
+
+const products = dataRows.map((rawLine, i) => {
+  const cells = parseCSVLine(rawLine);
+
+  // CSV columns (7 expected; allow missing variations)
+  const [id, title, description, price, active, sku, variationsRaw = ''] = cells;
+
+  const variations = String(variationsRaw)
+    .split(';')
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((entry) => {
+      const [name, vPrice] = entry.split(':');
+      return { name: (name || '').trim(), price: Number(vPrice) || 0 };
+    });
+
+  const numericId = Number(id);
+  const images = imageMap[numericId] || ['/placeholder-product.png'];
+
+  return {
+    id: numericId,
+    slug: String(sku || '').toLowerCase(),
+    title: String(title || '').trim(),
+    description: String(description || '').trim(),
+    price: Number(price) || 0,
+    active: String(active).toUpperCase() === 'TRUE',
+    sku: String(sku || '').trim(),
+    images,
+    variations,
+  };
+});
+
+// Ensure output folder
+fs.mkdirSync(path.dirname(outPath), { recursive: true });
+// Write JSON
+fs.writeFileSync(outPath, JSON.stringify(products, null, 2), 'utf8');
+
+console.log(`Generated ${products.length} products -> ${path.relative(process.cwd(), outPath)}`);
+JS
+
+# Run the generator
+node scripts/generate-products.js
+
