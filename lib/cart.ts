@@ -150,7 +150,5 @@ index f2d8930751366ac5415cfc5c90142260c0aeff9a..2f770394c3fcade8bc0cc0a46113c396
 +
 +export function getProduct(slug: string): Product | undefined {
 +  return products.find((p) => p.slug === slug && p.active);
-+}
- 
-EOF
-)
+}
+
