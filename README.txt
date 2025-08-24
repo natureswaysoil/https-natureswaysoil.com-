@@ -1,16 +1,119 @@
-
-Minimal On‑Site Stripe (Elements) — Tiny Bundle
------------------------------------------------
-Files:
-- components/CheckoutForm.tsx
-- pages/checkout.tsx
-- pages/api/stripe/create-intent.ts
-- pages/api/stripe/webhook.ts
-- lib/cart.ts
-
-ENV (Vercel):
-- STRIPE_SECRET_KEY, NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-- STRIPE_WEBHOOK_SECRET
-- MAKE_WEBHOOK_URL
-
-Link Buy buttons to: `/checkout?slug=<slug>&qty=1`
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/.gitignore b/.gitignore
+index eea6e6d7990df3393bf399c85377ed14b441c8df..731ec03d7f556f4336b3dabb67ae862731851171 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,101 +1,9 @@
+- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+-diff --git a/.gitignore b/.gitignore
+-index cdc84117d2d2e8f31c5ea8f660cbc15d0aae97fc..4917e4b23fee536acb83f8d381ac30bcc07177cc 100644
+---- a/.gitignore
+-+++ b/.gitignore
+-@@ -1,86 +1,6 @@
+-- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+--diff --git a/.gitignore b/.gitignore
+--index 6a39576b3d212729ab8360f9c1a6b4176c2e83d6..4917e4b23fee536acb83f8d381ac30bcc07177cc 100644
+----- a/.gitignore
+--+++ b/.gitignore
+--@@ -1,71 +1,6 @@
+--- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+---diff --git a/.gitignore b/.gitignore
+---index f8148d900f13b637345e9669682181914f99fadd..4917e4b23fee536acb83f8d381ac30bcc07177cc 100644
+------ a/.gitignore
+---+++ b/.gitignore
+---@@ -1,56 +1,6 @@
+---- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+----diff --git a/.gitignore b/.gitignore
+----index 8d284c243bd26700c0478ea378026edebf291274..6fed49a209c02e784348ed996f61f10edd08c53d 100644
+------- a/.gitignore
+----+++ b/.gitignore
+----@@ -1,16 +1,5 @@
+----- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+-----diff --git a/.gitignore b/.gitignore
+-----index 4f6c2833693d8a18a3ebcd2bf902895d726e1fdf..dcf145bb3595ddab21da8127e94d9dd4f1f5eedf 100644
+-------- a/.gitignore
+-----+++ b/.gitignore
+-----@@ -1,7 +1,6 @@
+----- node_modules
+----- .next
+----- .env
+----- 
+----- # generated files
+------/data/products.json
+----- 
+----- 
+-----EOF
+-----)
+----+node_modules
+----+.next
+----+.env
+----+
+----+# generated files
+---- 
+----EOF
+----)
+----diff --git a/.gitignore b/.gitignore
+----index 8d284c243bd26700c0478ea378026edebf291274..6fed49a209c02e784348ed996f61f10edd08c53d 100644
+------- a/.gitignore
+----+++ b/.gitignore
+----@@ -1,16 +1,5 @@
+----- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+-----diff --git a/.gitignore b/.gitignore
+-----index 4f6c2833693d8a18a3ebcd2bf902895d726e1fdf..dcf145bb3595ddab21da8127e94d9dd4f1f5eedf 100644
+-------- a/.gitignore
+-----+++ b/.gitignore
+-----@@ -1,7 +1,6 @@
+----- node_modules
+----- .next
+----- .env
+----- 
+----- # generated files
+------/data/products.json
+----- 
+----- 
+-----EOF
+-----)
+----+node_modules
+----+.next
+----+.env
+----+
+----+# generated files
+---+node_modules
+---+.next
+---+.env
+---+
+---+# generated files
+---+/data/products.json
+--- 
+---EOF
+---)
+--+node_modules
+--+.next
+--+.env
+--+
+--+# generated files
+--+/data/products.json
+-- 
+--EOF
+--)
+-+node_modules
+-+.next
+-+.env
+-+
+-+# generated files
+-+/data/products.json
+- 
+-EOF
+-)
++node_modules
++.next
++.env
++
++# generated files
++/data/products.json
++
++# build output
++/out
+ 
+EOF
+)
