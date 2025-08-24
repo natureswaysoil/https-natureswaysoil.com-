@@ -1,22 +1,22 @@
- (cd $(git rev-parse --show-toplevel) && git apply --3way <<'EOF'
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/products.csv b/products.csv
-index 0ecf66b9f18d9e79803d5bbaae12e803b9b5efaa..16c4041aa142bb0c675670b145e289599780c452 100644
+index 0ecf66b9f18d9e79803d5bbaae12e803b9b5efaa..73e1f62f00c6bf5c7500c9f2b096a099582996fc 100644
 --- a/products.csv
 +++ b/products.csv
-@@ -1,139 +1,11 @@
--  (cd $(git rev-parse --show-toplevel) && git apply --3way <<'EOF' 
+@@ -1,139 +1,4 @@
+-  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 -diff --git a/products.csv b/products.csv
 -index ac2f4798577b6dd591f7511107268dcfbe08fecb..83a8c93eec9b84667fe6297772b22bce734616aa 100644
 ---- a/products.csv
 -+++ b/products.csv
 -@@ -1,119 +1,11 @@
--- (cd $(git rev-parse --show-toplevel) && git apply --3way <<'EOF' 
+-- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 --diff --git a/products.csv b/products.csv
 --index 426a7b86a829442454378727d97fe089291cef53..83a8c93eec9b84667fe6297772b22bce734616aa 100644
 ----- a/products.csv
 --+++ b/products.csv
 --@@ -1,99 +1,11 @@
---- (cd $(git rev-parse --show-toplevel) && git apply --3way <<'EOF' 
+--- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 ---diff --git a/products.csv b/products.csv
 ---index 024e0f8cc383adc8ae8e37f4649cd1c1c07d2efe..86192f38bcf427d65861449ee730550f9e1376ca 100644
 ------ a/products.csv
@@ -144,16 +144,9 @@ index 0ecf66b9f18d9e79803d5bbaae12e803b9b5efaa..16c4041aa142bb0c675670b145e28959
 -EOF
 -)
 +id,title,description,price,active,sku,variations
-+1,Dog Urine Neutralizer & Lawn Revitalizer,Pet-safe enzyme spray repairs yellow spots and revitalizes soil,29.99,TRUE,DOG-URINE-NEUTRALIZER,32oz:29.99;1gal:89.99
-+2,Liquid Kelp Fertilizer,Cold-processed seaweed plant food for lawn and garden,24.99,TRUE,LIQUID-KELP,32oz:24.99;1gal:54.99
-+3,Organic Tomato Liquid Fertilizer,Vitamin B1 and aloe formula for healthy transplants and blossom-end rot prevention,29.99,TRUE,TOMATO-LIQUID,32oz:29.99;1gal:84.99
-+4,Organic Garden & House Plant Fertilizer,USDA biobased plant tonic with B vitamin and aloe for vigorous growth,20.99,TRUE,GARDEN-HOUSE-LIQUID,32oz:20.99;1gal:64.99
-+5,Liquid Bone Meal Fertilizer,Fast-absorbing phosphorus and calcium for strong roots and fruiting,14.99,TRUE,LIQUID-BONE,32oz:14.99;1gal:39.99
-+6,Organic Hydroponic Fertilizer Concentrate,Makes 512 gallons of nutrient solution for hydroponic and aquaponic systems,25.98,TRUE,HYDROPONIC-FERTILIZER,32oz:25.98;1gal:79.99
-+7,Enhanced Living Compost,Fermented duckweed extract with worm castings and biochar for rich soil amendment,29.99,TRUE,ENHANCED-COMPOST,1cuft:29.99
-+8,Hay Pasture & Lawn Fertilizer,Organic liquid soil conditioner for grass turf and forage,39.99,TRUE,HAY-PASTURE-FERTILIZER,1gal:39.99;2.5gal:99.99
-+9,Seaweed & Humic Acid Lawn Treatment,Liquid soil revitalizer with cold-processed kelp and humic acid,32.29,TRUE,SEAWEED-HUMIC-TREATMENT,32oz:32.29;1gal:99.99
-+10,Liquid Biochar with Kelp Humic & Fulvic Acid,Organic conditioner boosting microbes and nutrient retention,89.95,TRUE,LIQUID-BIOCHAR,32oz:34.99;1gal:89.95
++1,Liquid Kelp,Cold processed seaweed extract for all plants,24.99,TRUE,LIQUID-KELP,32oz:24.99;1gal:54.99
++2,Liquid Humic & Fulvic Acid,Concentrated organic acids to improve nutrient uptake and soil structure,29.99,TRUE,HUMIC-FULVIC,32oz:29.99;1gal:79.99
++3,Liquid Bone Meal,Fast absorbing phosphorus and calcium for strong roots and fruiting,14.99,TRUE,LIQUID-BONE,32oz:14.99;1gal:39.99
  
 EOF
 )
