@@ -1,4 +1,3 @@
-cat > scripts/generate-products.js <<'JS'
 'use strict';
 
 const fs = require('fs');
@@ -17,11 +16,17 @@ const csv = fs.readFileSync(csvPath, 'utf8').replace(/\r/g, '');
 const rows = csv.split('\n').filter(line => line.trim().length);
 const dataRows = rows.slice(1); // drop header
 
+// parse CSV respecting quoted commas
 const parseCSVLine = (line) =>
   (line.match(/("([^"]|"")*"|[^,]+)|(?<=,)(?=,)|^$/g) || [])
     .map(c => (c || '').trim())
-    .map(c => (c.startsWith('"') && c.endsWith('"')) ? c.slice(1, -1).replace(/""/g, '"') : c);
+    .map(c =>
+      c.startsWith('"') && c.endsWith('"')
+        ? c.slice(1, -1).replace(/""/g, '"')
+        : c
+    );
 
+// build image map from "id. path path"
 const imageMap = {};
 if (fs.existsSync(mapPath)) {
   const mapRaw = fs.readFileSync(mapPath, 'utf8').replace(/\r/g, '');
@@ -35,7 +40,8 @@ if (fs.existsSync(mapPath)) {
 }
 
 const products = dataRows.map(line => {
-  const [id, title, description, price, active, sku, variationsRaw = ''] = parseCSVLine(line);
+  const [id, title, description, price, active, sku, variationsRaw = ''] =
+    parseCSVLine(line);
 
   const variations = String(variationsRaw)
     .split(';')
@@ -63,5 +69,7 @@ const products = dataRows.map(line => {
 
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, JSON.stringify(products, null, 2), 'utf8');
-console.log(`Generated ${products.length} products -> ${path.relative(process.cwd(), outPath)}`);
-JS
+console.log(
+  `Generated ${products.length} products -> ${path.relative(process.cwd(), outPath)}`
+);
+
