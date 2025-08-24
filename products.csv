@@ -10,13 +10,13 @@ index 0ecf66b9f18d9e79803d5bbaae12e803b9b5efaa..16c4041aa142bb0c675670b145e28959
 ---- a/products.csv
 -+++ b/products.csv
 -@@ -1,119 +1,11 @@
--- (cd $(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+-- (cd $(git rev-parse --show-toplevel) && git apply --3way <<'EOF' 
 --diff --git a/products.csv b/products.csv
 --index 426a7b86a829442454378727d97fe089291cef53..83a8c93eec9b84667fe6297772b22bce734616aa 100644
 ----- a/products.csv
 --+++ b/products.csv
 --@@ -1,99 +1,11 @@
---- (cd $(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+--- (cd $(git rev-parse --show-toplevel) && git apply --3way <<'EOF' 
 ---diff --git a/products.csv b/products.csv
 ---index 024e0f8cc383adc8ae8e37f4649cd1c1c07d2efe..86192f38bcf427d65861449ee730550f9e1376ca 100644
 ------ a/products.csv
