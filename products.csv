@@ -1,3 +1,4 @@
+id,title,description,price,active,sku,variations
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/products.csv b/products.csv
 index 0ecf66b9f18d9e79803d5bbaae12e803b9b5efaa..73e1f62f00c6bf5c7500c9f2b096a099582996fc 100644
