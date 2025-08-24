@@ -1,3 +1,5 @@
+1. /nws/dog_urine.png /nws/dog_urine_2.png
+2. /nws/liquid_kelp.png
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a//dev/null b/pages/landing.tsx
 index 0000000000000000000000000000000000000000..93a3988e6db1d9350d0ac1e8b0dffd4899bf540d 100644
