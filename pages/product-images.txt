@@ -1,41 +1,537 @@
-  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/pages/product-images.txt b/pages/product-images.txt
-index d4b10c420d980c4cd178e150576f1120739a2ab7..73fdeee37d4d19d82b95f458f02cc4414fcc3317 100644
---- a/pages/product-images.txt
-+++ b/pages/product-images.txt
-@@ -1,59 +1,11 @@
--  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
--diff --git a/pages/product-images.txt b/pages/product-images.txt
--index 43d21e28be69e3bc7a68255b487a5f14c0b87c3e..f8a5dcd92b328537146ce317888c72913dc560a4 100644
----- a/pages/product-images.txt
--+++ b/pages/product-images.txt
--@@ -1,39 +1,11 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/product images for website.txt	 b/product images for website.txt	
+index 55d64e846443aecde0b662d0eb0303b45359ab03..f59ac0b292e0984b81681bd07c0f11c4e799d00b 100644
+--- a/product images for website.txt	
++++ b/product images for website.txt	
+@@ -1,556 +1,10 @@
+- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+-diff --git a/product images for website.txt	 b/product images for website.txt	
+-index 901e3a6578cf6172354335250d73da4635dfe38d..73fdeee37d4d19d82b95f458f02cc4414fcc3317 100644
+---- a/product images for website.txt	
+-+++ b/product images for website.txt	
+-@@ -1,536 +1,11 @@
 -- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
---diff --git a/pages/product-images.txt b/pages/product-images.txt
---index 94c44a24579f8e096ad249e20e00207eaabbd1b8..f8a5dcd92b328537146ce317888c72913dc560a4 100644
------ a/pages/product-images.txt
---+++ b/pages/product-images.txt
---@@ -1,19 +1,11 @@
+--diff --git a/product images for website.txt	 b/product images for website.txt	
+--index d4add2d39f4dea0212ea03a2177ea6268a3b0e2e..458e0769bb87b4eca74937d21dc966cebb7f8534 100644
+----- a/product images for website.txt	
+--+++ b/product images for website.txt	
+--@@ -1,516 +1,10 @@
 --- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
----diff --git a//dev/null b/product-images.txt
----index 0000000000000000000000000000000000000000..214feedf041311f312ac97388e928b19025ddba0 100644
------- a//dev/null
----+++ b/product-images.txt
----@@ -0,0 +1,10 @@
----+Product images mapping (Product ID to image paths):
----+1. /products/liquid-humic-fulvic-kelp-25gal.png
----+2. /products/organic-hydroponic-fertilizer-32oz.png
----+3. /products/liquid-biochar-kelp-humic-1gal.png
----+4. /products/organic-tomato-liquid-1gal.png
----+5. /products/hay-pasture-lawn-fertilizer-25gal.png
----+6. /products/enhanced-living-compost.png
----+7. /products/liquid-bone-meal-1gal.png
----+8. /products/organic-liquid-fertilizer-garden-house-1gal.png
----+9. /products/liquid-kelp-32oz.png
+---diff --git a/data/products.json b/data/products.json
+---index 34b2b93a400acd9b9118d93f1e06ba401bf59d3f..01c5dcf145b53ee27aca9b5557930636b24e4929 100644
+------ a/data/products.json
+---+++ b/data/products.json
+---@@ -1,231 +1,222 @@
+---- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+----diff --git a//dev/null b/data/products.json
+----index 0000000000000000000000000000000000000000..01c5dcf145b53ee27aca9b5557930636b24e4929 100644
+------- a//dev/null
+----+++ b/data/products.json
+----@@ -0,0 +1,222 @@
+----+[
+----+  {
+----+    "id": 1,
+----+    "slug": "nws-dog-urine-32oz",
+----+    "title": "Nature's Way Soil Dog Urine Neutralizer & Lawn Revitalizer 32oz",
+----+    "description": "Enzyme spray repairs yellow spots and revives lawns",
+----+    "price": 29.98,
+----+    "active": true,
+----+    "sku": "NWS-DOG-URINE-32OZ",
+----+    "images": [
+----+      "/products/dog-urine-neutralizer-32oz.jpg"
+----+    ],
+----+    "variations": [
+----+      {
+----+        "name": "32oz",
+----+        "price": 29.98
+----+      }
+----+    ]
+----+  },
+----+  {
+----+    "id": 2,
+----+    "slug": "nws-liq-kelp-32oz",
+----+    "title": "Nature's Way Soil Liquid Kelp Fertilizer 32oz",
+----+    "description": "Cold processed seaweed extract boosts growth",
+----+    "price": 24.99,
+----+    "active": true,
+----+    "sku": "NWS-LIQ-KELP-32OZ",
+----+    "images": [
+----+      "/products/liquid-kelp-32oz.jpg"
+----+    ],
+----+    "variations": [
+----+      {
+----+        "name": "16oz",
+----+        "price": 16.99
+----+      },
+----+      {
+----+        "name": "32oz",
+----+        "price": 24.99
+----+      },
+----+      {
+----+        "name": "64oz",
+----+        "price": 44.99
+----+      }
+----+    ]
+----+  },
+----+  {
+----+    "id": 3,
+----+    "slug": "nws-tomato-1gal",
+----+    "title": "Nature's Way Soil Organic Tomato Liquid Fertilizer 1gal",
+----+    "description": "Vitamin B1 and aloe for strong roots and transplants",
+----+    "price": 29.99,
+----+    "active": true,
+----+    "sku": "NWS-TOMATO-1GAL",
+----+    "images": [
+----+      "/products/organic-tomato-liquid-1gal.jpg"
+----+    ],
+----+    "variations": [
+----+      {
+----+        "name": "32oz",
+----+        "price": 20.99
+----+      },
+----+      {
+----+        "name": "1gal",
+----+        "price": 29.99
+----+      }
+----+    ]
+----+  },
+----+  {
+----+    "id": 4,
+----+    "slug": "nws-garden-house-1gal",
+----+    "title": "Nature's Way Soil Organic Liquid Fertilizer for Garden and House Plants 1gal",
+----+    "description": "USDA biobased blend with B vitamins and aloe",
+----+    "price": 20.26,
+----+    "active": true,
+----+    "sku": "NWS-GARDEN-HOUSE-1GAL",
+----+    "images": [
+----+      "/products/organic-liquid-garden-house-1gal.jpg"
+----+    ],
+----+    "variations": [
+----+      {
+----+        "name": "32oz",
+----+        "price": 14.99
+----+      },
+----+      {
+----+        "name": "1gal",
+----+        "price": 20.26
+----+      }
+----+    ]
+----+  },
+----+  {
+----+    "id": 5,
+----+    "slug": "nws-liq-bone-1gal",
+----+    "title": "Nature's Way Soil Liquid Bone Meal Fertilizer 1gal",
+----+    "description": "Fast absorbing phosphorus and calcium for roots",
+----+    "price": 39.99,
+----+    "active": true,
+----+    "sku": "NWS-LIQ-BONE-1GAL",
+----+    "images": [
+----+      "/products/liquid-bone-meal-1gal.jpg"
+----+    ],
+----+    "variations": [
+----+      {
+----+        "name": "32oz",
+----+        "price": 24.99
+----+      },
+----+      {
+----+        "name": "1gal",
+----+        "price": 39.99
+----+      }
+----+    ]
+----+  },
+----+  {
+----+    "id": 6,
+----+    "slug": "nws-hydro-32oz",
+----+    "title": "Nature's Way Soil Organic Hydroponic Fertilizer Concentrate 32oz",
+----+    "description": "Organic concentrate makes 512 gallons of solution",
+----+    "price": 25.98,
+----+    "active": true,
+----+    "sku": "NWS-HYDRO-32OZ",
+----+    "images": [
+----+      "/products/organic-hydroponic-fertilizer-32oz.jpg"
+----+    ],
+----+    "variations": [
+----+      {
+----+        "name": "32oz",
+----+        "price": 25.98
+----+      },
+----+      {
+----+        "name": "64oz",
+----+        "price": 44.99
+----+      }
+----+    ]
+----+  },
+----+  {
+----+    "id": 7,
+----+    "slug": "nws-living-compost",
+----+    "title": "Nature's Way Soil Enhanced Living Compost",
+----+    "description": "Duckweed extract worm castings biochar and compost",
+----+    "price": 29.98,
+----+    "active": true,
+----+    "sku": "NWS-LIVING-COMPOST",
+----+    "images": [
+----+      "/products/enhanced-living-compost.jpg"
+----+    ],
+----+    "variations": [
+----+      {
+----+        "name": "1cuft",
+----+        "price": 29.98
+----+      }
+----+    ]
+----+  },
+----+  {
+----+    "id": 8,
+----+    "slug": "nws-hay-pasture-25gal",
+----+    "title": "Nature's Way Soil Hay Pasture & Lawn Fertilizer 2.5gal",
+----+    "description": "Pet safe microbial nitrogen blend for turf and forage",
+----+    "price": 99.99,
+----+    "active": true,
+----+    "sku": "NWS-HAY-PASTURE-25GAL",
+----+    "images": [
+----+      "/products/hay-pasture-lawn-fertilizer-25gal.jpg"
+----+    ],
+----+    "variations": [
+----+      {
+----+        "name": "1gal",
+----+        "price": 66.99
+----+      },
+----+      {
+----+        "name": "2.5gal",
+----+        "price": 99.99
+----+      }
+----+    ]
+----+  },
+----+  {
+----+    "id": 9,
+----+    "slug": "nws-seaweed-humic-32oz",
+----+    "title": "Nature's Way Soil Seaweed & Humic Acid Lawn Treatment 32oz",
+----+    "description": "Kelp and humic acid blend revitalizes soil",
+----+    "price": 32.29,
+----+    "active": true,
+----+    "sku": "NWS-SEAWEED-HUMIC-32OZ",
+----+    "images": [
+----+      "/products/seaweed-humic-lawn-32oz.jpg"
+----+    ],
+----+    "variations": [
+----+      {
+----+        "name": "32oz",
+----+        "price": 32.29
+----+      },
+----+      {
+----+        "name": "1gal",
+----+        "price": 64.99
+----+      }
+----+    ]
+----+  },
+----+  {
+----+    "id": 10,
+----+    "slug": "nws-humic-fulvic-kelp-25gal",
+----+    "title": "Nature's Way Soil Liquid Humic & Fulvic Acid with Organic Kelp 2.5gal",
+----+    "description": "Humic and fulvic acids with kelp stimulate growth",
+----+    "price": 69.99,
+----+    "active": true,
+----+    "sku": "NWS-HUMIC-FULVIC-KELP-25GAL",
+----+    "images": [
+----+      "/products/liquid-humic-fulvic-kelp-25gal.jpg"
+----+    ],
+----+    "variations": [
+----+      {
+----+        "name": "32oz",
+----+        "price": 24.99
+----+      },
+----+      {
+----+        "name": "1gal",
+----+        "price": 39.99
+----+      },
+----+      {
+----+        "name": "2.5gal",
+----+        "price": 69.99
+----+      }
+----+    ]
+----+  }
+----+]
+---- 
+----EOF
+----)
+---+[
+---+  {
+---+    "id": 1,
+---+    "slug": "nws-dog-urine-32oz",
+---+    "title": "Nature's Way Soil Dog Urine Neutralizer & Lawn Revitalizer 32oz",
+---+    "description": "Enzyme spray repairs yellow spots and revives lawns",
+---+    "price": 29.98,
+---+    "active": true,
+---+    "sku": "NWS-DOG-URINE-32OZ",
+---+    "images": [
+---+      "/products/dog-urine-neutralizer-32oz.jpg"
+---+    ],
+---+    "variations": [
+---+      {
+---+        "name": "32oz",
+---+        "price": 29.98
+---+      }
+---+    ]
+---+  },
+---+  {
+---+    "id": 2,
+---+    "slug": "nws-liq-kelp-32oz",
+---+    "title": "Nature's Way Soil Liquid Kelp Fertilizer 32oz",
+---+    "description": "Cold processed seaweed extract boosts growth",
+---+    "price": 24.99,
+---+    "active": true,
+---+    "sku": "NWS-LIQ-KELP-32OZ",
+---+    "images": [
+---+      "/products/liquid-kelp-32oz.jpg"
+---+    ],
+---+    "variations": [
+---+      {
+---+        "name": "16oz",
+---+        "price": 16.99
+---+      },
+---+      {
+---+        "name": "32oz",
+---+        "price": 24.99
+---+      },
+---+      {
+---+        "name": "64oz",
+---+        "price": 44.99
+---+      }
+---+    ]
+---+  },
+---+  {
+---+    "id": 3,
+---+    "slug": "nws-tomato-1gal",
+---+    "title": "Nature's Way Soil Organic Tomato Liquid Fertilizer 1gal",
+---+    "description": "Vitamin B1 and aloe for strong roots and transplants",
+---+    "price": 29.99,
+---+    "active": true,
+---+    "sku": "NWS-TOMATO-1GAL",
+---+    "images": [
+---+      "/products/organic-tomato-liquid-1gal.jpg"
+---+    ],
+---+    "variations": [
+---+      {
+---+        "name": "32oz",
+---+        "price": 20.99
+---+      },
+---+      {
+---+        "name": "1gal",
+---+        "price": 29.99
+---+      }
+---+    ]
+---+  },
+---+  {
+---+    "id": 4,
+---+    "slug": "nws-garden-house-1gal",
+---+    "title": "Nature's Way Soil Organic Liquid Fertilizer for Garden and House Plants 1gal",
+---+    "description": "USDA biobased blend with B vitamins and aloe",
+---+    "price": 20.26,
+---+    "active": true,
+---+    "sku": "NWS-GARDEN-HOUSE-1GAL",
+---+    "images": [
+---+      "/products/organic-liquid-garden-house-1gal.jpg"
+---+    ],
+---+    "variations": [
+---+      {
+---+        "name": "32oz",
+---+        "price": 14.99
+---+      },
+---+      {
+---+        "name": "1gal",
+---+        "price": 20.26
+---+      }
+---+    ]
+---+  },
+---+  {
+---+    "id": 5,
+---+    "slug": "nws-liq-bone-1gal",
+---+    "title": "Nature's Way Soil Liquid Bone Meal Fertilizer 1gal",
+---+    "description": "Fast absorbing phosphorus and calcium for roots",
+---+    "price": 39.99,
+---+    "active": true,
+---+    "sku": "NWS-LIQ-BONE-1GAL",
+---+    "images": [
+---+      "/products/liquid-bone-meal-1gal.jpg"
+---+    ],
+---+    "variations": [
+---+      {
+---+        "name": "32oz",
+---+        "price": 24.99
+---+      },
+---+      {
+---+        "name": "1gal",
+---+        "price": 39.99
+---+      }
+---+    ]
+---+  },
+---+  {
+---+    "id": 6,
+---+    "slug": "nws-hydro-32oz",
+---+    "title": "Nature's Way Soil Organic Hydroponic Fertilizer Concentrate 32oz",
+---+    "description": "Organic concentrate makes 512 gallons of solution",
+---+    "price": 25.98,
+---+    "active": true,
+---+    "sku": "NWS-HYDRO-32OZ",
+---+    "images": [
+---+      "/products/organic-hydroponic-fertilizer-32oz.jpg"
+---+    ],
+---+    "variations": [
+---+      {
+---+        "name": "32oz",
+---+        "price": 25.98
+---+      },
+---+      {
+---+        "name": "64oz",
+---+        "price": 44.99
+---+      }
+---+    ]
+---+  },
+---+  {
+---+    "id": 7,
+---+    "slug": "nws-living-compost",
+---+    "title": "Nature's Way Soil Enhanced Living Compost",
+---+    "description": "Duckweed extract worm castings biochar and compost",
+---+    "price": 29.98,
+---+    "active": true,
+---+    "sku": "NWS-LIVING-COMPOST",
+---+    "images": [
+---+      "/products/enhanced-living-compost.jpg"
+---+    ],
+---+    "variations": [
+---+      {
+---+        "name": "1cuft",
+---+        "price": 29.98
+---+      }
+---+    ]
+---+  },
+---+  {
+---+    "id": 8,
+---+    "slug": "nws-hay-pasture-25gal",
+---+    "title": "Nature's Way Soil Hay Pasture & Lawn Fertilizer 2.5gal",
+---+    "description": "Pet safe microbial nitrogen blend for turf and forage",
+---+    "price": 99.99,
+---+    "active": true,
+---+    "sku": "NWS-HAY-PASTURE-25GAL",
+---+    "images": [
+---+      "/products/hay-pasture-lawn-fertilizer-25gal.jpg"
+---+    ],
+---+    "variations": [
+---+      {
+---+        "name": "1gal",
+---+        "price": 66.99
+---+      },
+---+      {
+---+        "name": "2.5gal",
+---+        "price": 99.99
+---+      }
+---+    ]
+---+  },
+---+  {
+---+    "id": 9,
+---+    "slug": "nws-seaweed-humic-32oz",
+---+    "title": "Nature's Way Soil Seaweed & Humic Acid Lawn Treatment 32oz",
+---+    "description": "Kelp and humic acid blend revitalizes soil",
+---+    "price": 32.29,
+---+    "active": true,
+---+    "sku": "NWS-SEAWEED-HUMIC-32OZ",
+---+    "images": [
+---+      "/products/seaweed-humic-lawn-32oz.jpg"
+---+    ],
+---+    "variations": [
+---+      {
+---+        "name": "32oz",
+---+        "price": 32.29
+---+      },
+---+      {
+---+        "name": "1gal",
+---+        "price": 64.99
+---+      }
+---+    ]
+---+  },
+---+  {
+---+    "id": 10,
+---+    "slug": "nws-humic-fulvic-kelp-25gal",
+---+    "title": "Nature's Way Soil Liquid Humic & Fulvic Acid with Organic Kelp 2.5gal",
+---+    "description": "Humic and fulvic acids with kelp stimulate growth",
+---+    "price": 69.99,
+---+    "active": true,
+---+    "sku": "NWS-HUMIC-FULVIC-KELP-25GAL",
+---+    "images": [
+---+      "/products/liquid-humic-fulvic-kelp-25gal.jpg"
+---+    ],
+---+    "variations": [
+---+      {
+---+        "name": "32oz",
+---+        "price": 24.99
+---+      },
+---+      {
+---+        "name": "1gal",
+---+        "price": 39.99
+---+      },
+---+      {
+---+        "name": "2.5gal",
+---+        "price": 69.99
+---+      }
+---+    ]
+---+  }
+---+]
 --- 
 ---EOF
 ---)
---+Product images mapping (Product ID to image paths):
+---diff --git a/product images for website.txt	 b/product images for website.txt	
+---index 46d78bf97b238a9a60556dfdb61a3ae521bde63d..7b24d084fdc33f3ac47007e288fe0532fe3d7962 100644
+------ a/product images for website.txt	
+---+++ b/product images for website.txt	
+---@@ -1,34 +1,14 @@
+---- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+----diff --git a/product images for website.txt	 b/product images for website.txt	
+----index 80d8991ee2da4a45d179de883ed9137053fc6c0c..7b24d084fdc33f3ac47007e288fe0532fe3d7962 100644
+------- a/product images for website.txt	
+----+++ b/product images for website.txt	
+----@@ -1,14 +1,14 @@
+---- Product images for website mapping (in order matching CSV Product ID):
+---- 
+-----1. /products/organic-liquid-1gal.jpg
+-----2. /products/tomato-1gal.jpg  
+-----3. /products/kelp-1gal.jpg
+-----4. /products/premium-soil-2cf.jpg
+-----5. /products/worm-casting-1gal.jpg
+-----6. /products/root-booster-32oz.jpg
+-----7. /products/starter-kit.jpg
+-----8. /products/compost-tea-1gal.jpg
+-----9. /products/lawn-food-2gal.jpg
+-----10. /products/ph-balancer-16oz.jpg
+----+1. /products/dog-urine-neutralizer-32oz.jpg
+----+2. /products/liquid-kelp-32oz.jpg
+----+3. /products/organic-tomato-liquid-1gal.jpg
+----+4. /products/organic-liquid-garden-house-1gal.jpg
+----+5. /products/liquid-bone-meal-1gal.jpg
+----+6. /products/organic-hydroponic-fertilizer-32oz.jpg
+----+7. /products/enhanced-living-compost.jpg
+----+8. /products/hay-pasture-lawn-fertilizer-25gal.jpg
+----+9. /products/seaweed-humic-lawn-32oz.jpg
+----+10. /products/liquid-humic-fulvic-kelp-25gal.jpg
+---- 
+-----Note: Products without images will use '/placeholder-product.png' as fallback.
+----+Note: Products without images will use '/placeholder-product.png' as fallback.
+---- 
+----EOF
+----)
+---+Product images for website mapping (in order matching CSV Product ID):
+---+
+---+1. /products/dog-urine-neutralizer-32oz.jpg
+---+2. /products/liquid-kelp-32oz.jpg
+---+3. /products/organic-tomato-liquid-1gal.jpg
+---+4. /products/organic-liquid-garden-house-1gal.jpg
+---+5. /products/liquid-bone-meal-1gal.jpg
+---+6. /products/organic-hydroponic-fertilizer-32oz.jpg
+---+7. /products/enhanced-living-compost.jpg
+---+8. /products/hay-pasture-lawn-fertilizer-25gal.jpg
+---+9. /products/seaweed-humic-lawn-32oz.jpg
+---+10. /products/liquid-humic-fulvic-kelp-25gal.jpg
+---+
+---+Note: Products without images will use '/placeholder-product.png' as fallback.
+---
 --+1. /products/dog-urine-neutralizer-32oz.jpg
 --+2. /products/liquid-kelp-32oz.jpg
 --+3. /products/organic-tomato-liquid-1gal.jpg
@@ -49,6 +545,7 @@ index d4b10c420d980c4cd178e150576f1120739a2ab7..73fdeee37d4d19d82b95f458f02cc441
 -- 
 --EOF
 --)
+--
 -+Product images mapping (Product ID to image paths):
 -+1. /products/dog-urine-neutralizer-32oz.jpg
 -+2. /products/liquid-kelp-32oz.jpg
@@ -58,22 +555,21 @@ index d4b10c420d980c4cd178e150576f1120739a2ab7..73fdeee37d4d19d82b95f458f02cc441
 -+6. /products/organic-hydroponic-fertilizer-32oz.jpg
 -+7. /products/enhanced-living-compost.jpg
 -+8. /products/hay-pasture-lawn-fertilizer-25gal.jpg
--+9. /products/seaweed-humic-lawn-32oz.jpg
+-+9. /products/seaweed-humic-32oz.jpg
 -+10. /products/liquid-humic-fulvic-kelp-25gal.jpg
 - 
 -EOF
 -)
-+Product images mapping (Product ID to image paths):
-+1. /products/dog-urine-neutralizer-32oz.jpg
-+2. /products/liquid-kelp-32oz.jpg
-+3. /products/organic-tomato-liquid-1gal.jpg
-+4. /products/organic-liquid-garden-house-1gal.jpg
-+5. /products/liquid-bone-meal-1gal.jpg
-+6. /products/organic-hydroponic-fertilizer-32oz.jpg
-+7. /products/enhanced-living-compost.jpg
-+8. /products/hay-pasture-lawn-fertilizer-25gal.jpg
-+9. /products/seaweed-humic-32oz.jpg
-+10. /products/liquid-humic-fulvic-kelp-25gal.jpg
++1. https://m.media-amazon.com/images/W/MEDIAX_792452f2-b0dc-4d0c-adcb-092f0c87e975.jpg
++2. https://m.media-amazon.com/images/W/MEDIAX_ff4f0925-034a-43b0-9d65-47294bbb2039.jpg
++3. https://m.media-amazon.com/images/W/MEDIAX_ec86d03d-750d-415a-85a3-7a96b96ab004.jpg
++4. https://m.media-amazon.com/images/W/MEDIAX_ed01b657-bacf-4a9b-9a55-f16494e20267.jpg
++5. https://m.media-amazon.com/images/W/MEDIAX_7c17ca43-c60d-41a1-ad80-03ba794f6099.jpg
++6. https://m.media-amazon.com/images/W/MEDIAX_04e7aa87-2f9a-4b9a-972c-6202b32d44f2.jpg
++7. https://m.media-amazon.com/images/W/MEDIAX_4f3718e8-d4ff-4c04-a4e3-4b6b46cad3e9.jpg
++8. https://m.media-amazon.com/images/W/MEDIAX_9f3642bf-741c-475d-b927-ca25657f0feb.jpg
++9. https://m.media-amazon.com/images/W/MEDIAX_05f723d1-29d6-4d86-bfdd-af74ac31fc70.jpg
++10. https://m.media-amazon.com/images/W/MEDIAX_735e9652-73db-4867-8a7e-bac6b73981d7.jpg
  
 EOF
 )
