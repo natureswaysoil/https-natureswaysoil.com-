@@ -16,11 +16,17 @@ const csv = fs.readFileSync(csvPath, 'utf8').replace(/\r/g, '');
 const rows = csv.split('\n').filter(line => line.trim().length);
 const dataRows = rows.slice(1); // drop header
 
+// parse CSV respecting quoted commas
 const parseCSVLine = (line) =>
   (line.match(/("([^"]|"")*"|[^,]+)|(?<=,)(?=,)|^$/g) || [])
     .map(c => (c || '').trim())
-    .map(c => (c.startsWith('"') && c.endsWith('"')) ? c.slice(1, -1).replace(/""/g, '"') : c);
+    .map(c =>
+      c.startsWith('"') && c.endsWith('"')
+        ? c.slice(1, -1).replace(/""/g, '"')
+        : c
+    );
 
+// build image map from "id. path path"
 const imageMap = {};
 if (fs.existsSync(mapPath)) {
   const mapRaw = fs.readFileSync(mapPath, 'utf8').replace(/\r/g, '');
@@ -34,7 +40,12 @@ if (fs.existsSync(mapPath)) {
 }
 
 const products = dataRows.map(line => {
+<<<<<<< HEAD
   const [id, title, description, price, active, sku, variationsRaw = ''] = parseCSVLine(line);
+=======
+  const [id, title, description, price, active, sku, variationsRaw = ''] =
+    parseCSVLine(line);
+>>>>>>> 69bae824b80f1b34b26cbe026e3a24431e1048a8
 
   const variations = String(variationsRaw)
     .split(';')
