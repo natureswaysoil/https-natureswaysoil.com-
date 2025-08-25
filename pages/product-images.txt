@@ -1,9 +1,9 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/product images for website.txt	 b/product images for website.txt	
+
 index 55d64e846443aecde0b662d0eb0303b45359ab03..f59ac0b292e0984b81681bd07c0f11c4e799d00b 100644
---- a/product images for website.txt	
-+++ b/product images for website.txt	
-@@ -1,556 +1,10 @@
+
+
+
 - (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 -diff --git a/product images for website.txt	 b/product images for website.txt	
 -index 901e3a6578cf6172354335250d73da4635dfe38d..73fdeee37d4d19d82b95f458f02cc4414fcc3317 100644
@@ -571,5 +571,5 @@ index 55d64e846443aecde0b662d0eb0303b45359ab03..f59ac0b292e0984b81681bd07c0f11c4
 +9. https://m.media-amazon.com/images/W/MEDIAX_05f723d1-29d6-4d86-bfdd-af74ac31fc70.jpg
 +10. https://m.media-amazon.com/images/W/MEDIAX_735e9652-73db-4867-8a7e-bac6b73981d7.jpg
  
-EOF
+
 )

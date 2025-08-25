@@ -3,7 +3,8 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import Image from 'next/image';
 import CheckoutForm from '@/components/CheckoutForm';
-import { getProduct, Product } from '@/lib/cart';
+import { getProduct } from '@/lib/cart';
+import type { Product } from '@/lib/cart';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || '');
 
