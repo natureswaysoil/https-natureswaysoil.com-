@@ -40,12 +40,7 @@ if (fs.existsSync(mapPath)) {
 }
 
 const products = dataRows.map(line => {
-<<<<<<< HEAD
   const [id, title, description, price, active, sku, variationsRaw = ''] = parseCSVLine(line);
-=======
-  const [id, title, description, price, active, sku, variationsRaw = ''] =
-    parseCSVLine(line);
->>>>>>> 69bae824b80f1b34b26cbe026e3a24431e1048a8
 
   const variations = String(variationsRaw)
     .split(';')
@@ -58,6 +53,7 @@ const products = dataRows.map(line => {
 
   const numericId = Number(id);
 
+  const [id, title, description, price, active, sku, variationsRaw = ''] = parseCSVLine(line);
   return {
     id: numericId,
     slug: String(sku || '').toLowerCase(),
