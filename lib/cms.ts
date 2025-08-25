@@ -1,9 +1,4 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a//dev/null b/lib/cms.ts
-index 0000000000000000000000000000000000000000..302bcdffa87f2003105ed99ae0d076c285b1f166 100644
---- a//dev/null
-+++ b/lib/cms.ts
-@@ -0,0 +1,56 @@
+
 +import { env } from 'process';
 +
 +export type LandingContent = {
