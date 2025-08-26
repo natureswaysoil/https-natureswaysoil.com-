@@ -13,6 +13,7 @@ export type Product = {
   active: boolean;
   sku: string;
   images: string[];
+  details?: string[];
   variations?: { name: string; price: number }[];
 };
 export type CartItem = {
