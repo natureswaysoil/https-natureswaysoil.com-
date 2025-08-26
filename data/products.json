@@ -1,192 +1,192 @@
 [
   {
     "id": 1,
-    "slug": "dog-urine-neutralizer",
+    "slug": "nws-dog-urine-32oz",
     "title": "Nature's Way Soil Dog Urine Neutralizer & Lawn Revitalizer 32oz",
     "description": "Enzyme spray repairs yellow spots and revives lawns",
     "price": 29.98,
     "active": true,
     "sku": "NWS-DOG-URINE-32OZ",
-    "images": ["/placeholder-product.png"],
+    "images": ["https://m.media-amazon.com/images/W/MEDIAX_792452f2-b0dc-4d0c-adcb-092f0c87e975.jpg"],
     "details": [
-      "Now with enzymes",
-      "Pet-safe grass repair for yellow spots",
-      "Odor eliminator and soil reviver"
+      "Enzyme spray repairs yellow spots",
+      "Pet-safe formula",
+      "Neutralizes odors"
     ],
     "variations": [
-      {"name": "32oz", "price": 29.98}
+      { "name": "32oz", "price": 29.98 }
     ]
   },
   {
     "id": 2,
-    "slug": "liquid-kelp",
+    "slug": "nws-liq-kelp-32oz",
     "title": "Nature's Way Soil Liquid Kelp Fertilizer 32oz",
     "description": "Cold processed seaweed extract boosts growth",
-    "price": 24.49,
+    "price": 24.99,
     "active": true,
     "sku": "NWS-LIQ-KELP-32OZ",
-    "images": ["/placeholder-product.png"],
+    "images": ["https://m.media-amazon.com/images/W/MEDIAX_ff4f0925-034a-43b0-9d65-47294bbb2039.jpg"],
     "details": [
       "Organic seaweed plant food",
-      "For lawn, garden, flowers and vegetables",
+      "For lawn, garden and vegetables",
       "Cold-processed natural growth booster"
     ],
     "variations": [
-      {"name": "16oz", "price": 16.99},
-      {"name": "32oz", "price": 24.49},
-      {"name": "64oz", "price": 44.99}
+      { "name": "16oz", "price": 16.99 },
+      { "name": "32oz", "price": 24.99 },
+      { "name": "64oz", "price": 44.99 }
     ]
   },
   {
     "id": 3,
-    "slug": "tomato-liquid-fertilizer",
+    "slug": "nws-tomato-1gal",
     "title": "Nature's Way Soil Organic Tomato Liquid Fertilizer 1gal",
     "description": "Vitamin B1 and aloe for strong roots and transplants",
     "price": 29.99,
     "active": true,
     "sku": "NWS-TOMATO-1GAL",
-    "images": ["/placeholder-product.png"],
+    "images": ["https://m.media-amazon.com/images/W/MEDIAX_ec86d03d-750d-415a-85a3-7a96b96ab004.jpg"],
     "details": [
-      "Made fresh weekly",
-      "Includes vitamin B1 and aloe vera",
-      "Helps stop blossom end rot"
+      "Supports strong root development",
+      "Includes vitamin B1 and aloe",
+      "Ideal for transplants"
     ],
     "variations": [
-      {"name": "32oz", "price": 20.99},
-      {"name": "1gal", "price": 29.99}
+      { "name": "32oz", "price": 20.99 },
+      { "name": "1gal", "price": 29.99 }
     ]
   },
   {
     "id": 4,
-    "slug": "garden-house-fertilizer",
+    "slug": "nws-garden-house-1gal",
     "title": "Nature's Way Soil Organic Liquid Fertilizer for Garden and House Plants 1gal",
     "description": "USDA biobased blend with B vitamins and aloe",
     "price": 20.26,
     "active": true,
     "sku": "NWS-GARDEN-HOUSE-1GAL",
-    "images": ["/placeholder-product.png"],
+    "images": ["https://m.media-amazon.com/images/W/MEDIAX_ed01b657-bacf-4a9b-9a55-f16494e20267.jpg"],
     "details": [
-      "100% organic and USDA certified biobased",
-      "Made from natural enzyme extracts",
-      "Provides essential vitamins for plants"
+      "USDA biobased formulation",
+      "Includes B vitamins and aloe",
+      "Great for garden and house plants"
     ],
     "variations": [
-      {"name": "32oz", "price": 14.99},
-      {"name": "1gal", "price": 20.26}
+      { "name": "32oz", "price": 14.99 },
+      { "name": "1gal", "price": 20.26 }
     ]
   },
   {
     "id": 5,
-    "slug": "liquid-bone-meal",
+    "slug": "nws-liq-bone-1gal",
     "title": "Nature's Way Soil Liquid Bone Meal Fertilizer 1gal",
     "description": "Fast absorbing phosphorus and calcium for roots",
     "price": 39.99,
     "active": true,
     "sku": "NWS-LIQ-BONE-1GAL",
-    "images": ["/placeholder-product.png"],
+    "images": ["https://m.media-amazon.com/images/W/MEDIAX_7c17ca43-c60d-41a1-ad80-03ba794f6099.jpg"],
     "details": [
-      "Organic phosphorus and calcium",
-      "Supports root development and flowering",
-      "Fast absorbing liquid formula"
+      "Provides phosphorus and calcium",
+      "Supports strong root growth",
+      "Fast absorbing formula"
     ],
     "variations": [
-      {"name": "32oz", "price": 24.99},
-      {"name": "1gal", "price": 39.99}
+      { "name": "32oz", "price": 24.99 },
+      { "name": "1gal", "price": 39.99 }
     ]
   },
   {
     "id": 6,
-    "slug": "hydroponic-fertilizer",
+    "slug": "nws-hydro-32oz",
     "title": "Nature's Way Soil Organic Hydroponic Fertilizer Concentrate 32oz",
-    "description": "Makes 512 gallons of nutrient solution",
+    "description": "Organic concentrate makes 512 gallons of solution",
     "price": 25.98,
     "active": true,
     "sku": "NWS-HYDRO-32OZ",
-    "images": ["/placeholder-product.png"],
+    "images": ["https://m.media-amazon.com/images/W/MEDIAX_04e7aa87-2f9a-4b9a-972c-6202b32d44f2.jpg"],
     "details": [
-      "Organic concentrate for hydroponic systems",
-      "Supports vigorous plant growth",
-      "Makes up to 512 gallons"
+      "Organic hydroponic formula",
+      "Makes up to 512 gallons",
+      "Concentrated for cost efficiency"
     ],
     "variations": [
-      {"name": "32oz", "price": 25.98},
-      {"name": "64oz", "price": 44.99}
+      { "name": "32oz", "price": 25.98 },
+      { "name": "64oz", "price": 44.99 }
     ]
   },
   {
     "id": 7,
-    "slug": "living-compost",
+    "slug": "nws-living-compost",
     "title": "Nature's Way Soil Enhanced Living Compost",
-    "description": "Duckweed extract, worm castings, biochar and compost",
+    "description": "Duckweed extract worm castings biochar and compost",
     "price": 29.98,
     "active": true,
     "sku": "NWS-LIVING-COMPOST",
-    "images": ["/placeholder-product.png"],
+    "images": ["https://m.media-amazon.com/images/W/MEDIAX_4f3718e8-d4ff-4c04-a4e3-4b6b46cad3e9.jpg"],
     "details": [
-      "Enhanced living compost",
-      "20% worm castings and biochar",
-      "Great for root and plant growth"
+      "Includes worm castings and biochar",
+      "Enhanced with duckweed extract",
+      "Feeds soil microbes"
     ],
     "variations": [
-      {"name": "1cuft", "price": 29.98}
+      { "name": "1cuft", "price": 29.98 }
     ]
   },
   {
     "id": 8,
-    "slug": "hay-pasture-fertilizer",
+    "slug": "nws-hay-pasture-25gal",
     "title": "Nature's Way Soil Hay Pasture & Lawn Fertilizer 2.5gal",
     "description": "Pet safe microbial nitrogen blend for turf and forage",
     "price": 99.99,
     "active": true,
     "sku": "NWS-HAY-PASTURE-25GAL",
-    "images": ["/placeholder-product.png"],
+    "images": ["https://m.media-amazon.com/images/W/MEDIAX_9f3642bf-741c-475d-b927-ca25657f0feb.jpg"],
     "details": [
-      "Organic pasture and lawn formula",
-      "Safe for horses, goats and pets",
-      "Liquid fertilizer for grass, turf and forage"
+      "Pet safe nitrogen blend",
+      "Supports turf and forage",
+      "Microbial based formula"
     ],
     "variations": [
-      {"name": "1gal", "price": 66.99},
-      {"name": "2.5gal", "price": 99.99}
+      { "name": "1gal", "price": 66.99 },
+      { "name": "2.5gal", "price": 99.99 }
     ]
   },
   {
     "id": 9,
-    "slug": "seaweed-humic-treatment",
+    "slug": "nws-seaweed-humic-32oz",
     "title": "Nature's Way Soil Seaweed & Humic Acid Lawn Treatment 32oz",
     "description": "Kelp and humic acid blend revitalizes soil",
     "price": 32.29,
     "active": true,
     "sku": "NWS-SEAWEED-HUMIC-32OZ",
-    "images": ["/placeholder-product.png"],
+    "images": ["https://m.media-amazon.com/images/W/MEDIAX_05f723d1-29d6-4d86-bfdd-af74ac31fc70.jpg"],
     "details": [
-      "Organic seaweed with humic acid",
-      "Improves soil and grass health",
-      "Cold processed kelp blend"
+      "Kelp and humic acid blend",
+      "Revitalizes lawn soil",
+      "Easy hose-end application"
     ],
     "variations": [
-      {"name": "32oz", "price": 32.29},
-      {"name": "1gal", "price": 64.99}
+      { "name": "32oz", "price": 32.29 },
+      { "name": "1gal", "price": 64.99 }
     ]
   },
   {
     "id": 10,
-    "slug": "humic-fulvic-kelp",
+    "slug": "nws-humic-fulvic-kelp-25gal",
     "title": "Nature's Way Soil Liquid Humic & Fulvic Acid with Organic Kelp 2.5gal",
     "description": "Humic and fulvic acids with kelp stimulate growth",
     "price": 69.99,
     "active": true,
     "sku": "NWS-HUMIC-FULVIC-KELP-25GAL",
-    "images": ["/placeholder-product.png"],
+    "images": ["https://m.media-amazon.com/images/W/MEDIAX_735e9652-73db-4867-8a7e-bac6b73981d7.jpg"],
     "details": [
-      "Concentrated humic and fulvic acids",
-      "Organic kelp for plant growth",
-      "Family-owned product"
+      "Humic & fulvic acids with kelp",
+      "Stimulates vigorous growth",
+      "Concentrated liquid formula"
     ],
     "variations": [
-      {"name": "32oz", "price": 24.99},
-      {"name": "1gal", "price": 39.99},
-      {"name": "2.5gal", "price": 69.99}
+      { "name": "32oz", "price": 24.99 },
+      { "name": "1gal", "price": 39.99 },
+      { "name": "2.5gal", "price": 69.99 }
     ]
   }
 ]
