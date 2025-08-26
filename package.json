@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run generate-products && next build",
+    "build": "next build",
     "start": "next start",
     "generate-products": "node scripts/generate-products.js"
   },
