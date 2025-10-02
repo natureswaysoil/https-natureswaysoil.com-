@@ -53,7 +53,6 @@ const products = dataRows.map(line => {
 
   const numericId = Number(id);
 
-  const [id, title, description, price, active, sku, variationsRaw = ''] = parseCSVLine(line);
   return {
     id: numericId,
     slug: String(sku || '').toLowerCase(),
