@@ -1,0 +1,39 @@
+{
+  "videoSettings": {
+    "duration": "60-90 seconds",
+    "format": "mp4",
+    "resolution": "1920x1080",
+    "style": "educational, natural, calming"
+  },
+  "topics": [
+    "Composting Basics for Beginners",
+    "Building Healthy Soil Naturally",
+    "Organic Pest Control Methods",
+    "Companion Planting Guide",
+    "Water Conservation in the Garden",
+    "Starting Seeds Indoors",
+    "Fall Garden Preparation",
+    "Spring Garden Planning",
+    "Natural Fertilizers and Amendments",
+    "Mulching Techniques for Success",
+    "Raised Bed Gardening Tips",
+    "Container Gardening Essentials",
+    "Attracting Beneficial Insects",
+    "Crop Rotation Strategies",
+    "Soil pH and Plant Health",
+    "Vermicomposting at Home",
+    "No-Till Gardening Methods",
+    "Heirloom vs Hybrid Seeds",
+    "Preserving Your Harvest",
+    "Winter Garden Maintenance"
+  ],
+  "brandColors": {
+    "primary": "#16a34a",
+    "secondary": "#15803d",
+    "accent": "#86efac"
+  },
+  "voiceSettings": {
+    "tone": "friendly, knowledgeable, encouraging",
+    "pace": "moderate"
+  }
+}
