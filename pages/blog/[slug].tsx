@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import type { GrayMatterFile } from 'gray-matter';
 
 interface BlogPostProps {
   post: {
@@ -109,7 +110,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
-  const htmlContent = marked(content);
+  const htmlContent = await marked(content);
 
   return {
     props: {

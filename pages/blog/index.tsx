@@ -4,6 +4,7 @@ import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import type { GrayMatterFile } from 'gray-matter';
 
 interface BlogPost {
   slug: string;
