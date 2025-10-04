@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+
 interface AutoplayHeroVideoProps {
   videoUrl: string;
   title?: string;
@@ -9,28 +13,59 @@ export default function AutoplayHeroVideo({
   title = "The Hidden World Beneath Your Feet",
   description = "Discover how soil ecosystems work together to feed your plants naturally"
 }: AutoplayHeroVideoProps) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  
   // Check if it's a Pictory embed URL
   const isPictoryEmbed = videoUrl.includes('pictory.ai');
   
-  // Convert Pictory preview URL to autoplay embed
+  // For Pictory, use the player mode URL
   const embedUrl = isPictoryEmbed 
-    ? videoUrl.replace('?mode=player', '?autoplay=1&muted=1&loop=1&controls=1')
+    ? videoUrl.replace('?mode=player', '?mode=player&controls=1')
     : videoUrl;
+
+  const handlePlayClick = () => {
+    setIsPlaying(true);
+  };
 
   return (
     <section className="relative w-full bg-black">
       {/* Video Container */}
       <div className="relative w-full aspect-video max-h-[80vh]">
         {isPictoryEmbed ? (
-          // Pictory iframe embed
-          <iframe
-            className="w-full h-full"
-            src={embedUrl}
-            title={title}
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            style={{ border: 'none' }}
-          />
+          <>
+            {/* Pictory iframe embed */}
+            <iframe
+              className="w-full h-full"
+              src={embedUrl}
+              title={title}
+              allow="autoplay; fullscreen"
+              allowFullScreen
+              style={{ border: 'none' }}
+            />
+            
+            {/* Play Button Overlay - Only show if not playing */}
+            {!isPlaying && (
+              <div 
+                className="absolute inset-0 bg-black/40 flex items-center justify-center cursor-pointer group"
+                onClick={handlePlayClick}
+              >
+                <div className="bg-green-600 hover:bg-green-700 rounded-full p-8 transition-all duration-300 group-hover:scale-110 shadow-2xl">
+                  <svg 
+                    className="w-16 h-16 text-white" 
+                    fill="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <div className="absolute bottom-8 left-8 right-8 text-center">
+                  <p className="text-white text-xl font-semibold drop-shadow-lg">
+                    ▶ Click to Watch: Learn How Soil Ecosystems Work
+                  </p>
+                </div>
+              </div>
+            )}
+          </>
         ) : (
           // Direct video file
           <video
