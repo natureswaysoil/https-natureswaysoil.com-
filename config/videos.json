@@ -1,6 +1,6 @@
 {
   "heroVideo": {
-    "url": "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "url": "https://video.pictory.ai/preview/18b7a931-40b7-4b52-b300-d7236c56938a?mode=player",
     "title": "The Hidden World Beneath Your Feet",
     "description": "Discover how earthworms, fungi, and microbes work together to feed your plants naturally—and why synthetic fertilizers disrupt this ancient balance.",
     "enabled": true,
@@ -13,7 +13,7 @@
       "id": "soil-ecosystem",
       "title": "The Hidden World Beneath Your Feet: How Soil Ecosystems Work Together",
       "description": "Educational video about soil food web, mycorrhizae, earthworms, nematodes, and how synthetic fertilizers disrupt natural nutrient cycling",
-      "url": "PENDING_PICTORY_GENERATION",
+      "url": "https://video.pictory.ai/preview/18b7a931-40b7-4b52-b300-d7236c56938a?mode=player",
       "duration": "4:50",
       "sources": [
         "USDA Natural Resources Conservation Service - Soil Biology Primer",
