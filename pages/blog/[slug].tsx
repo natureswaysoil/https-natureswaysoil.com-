@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import type { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import fs from 'fs';
@@ -123,6 +123,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         thumbnail: data.thumbnail || null,
       },
     },
-    revalidate: 60,
   };
 };
