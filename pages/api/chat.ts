@@ -62,9 +62,26 @@ const generateResponse = (userMessage: string, products: any[]): string => {
   // Product recommendations - Tomatoes
   if (message.includes('tomato')) {
     const tomatoProduct = products.find(p => p.title.toLowerCase().includes('tomato'));
+    const generalFert = products.find(p => p.title.toLowerCase().includes('garden and house'));
+    const pottingSoil = products.find(p => p.category === 'Potting Soil' && p.title.includes('16 Quarts'));
+    
+    let response = `Great question about tomatoes! 🍅 Let me share what tomato plants need for success:\n\n**Essential Requirements for Healthy Tomatoes:**\n\n🌞 **Sunlight**\n• 6-8 hours of direct sun daily\n• More sun = more fruit production\n\n💧 **Water**\n• Deep watering 1-2 times per week\n• Consistent moisture prevents blossom end rot\n• Avoid overhead watering to prevent disease\n\n🌱 **Nutrients**\n• Nitrogen for leafy growth (early season)\n• Phosphorus for root development\n• Potassium for fruit production\n• Calcium to prevent blossom end rot\n• Regular feeding every 2-3 weeks\n\n🪴 **Soil**\n• Well-draining, rich organic matter\n• pH 6.0-6.8 (slightly acidic)\n• Loose texture for root growth\n\n🌿 **Support & Care**\n• Stake or cage plants early\n• Prune suckers for better airflow\n• Mulch to retain moisture\n• Watch for pests and diseases\n\n**Product Recommendations:**\n\n`;
+    
     if (tomatoProduct) {
-      return `For tomatoes, I highly recommend our **${tomatoProduct.title}**! 🍅\n\n✨ Benefits:\n${tomatoProduct.benefits}\n\n💰 Price: $${tomatoProduct.price}\n\nThis formula includes Vitamin B-1 and Aloe Vera for faster root establishment and helps prevent blossom end rot. Perfect for healthy, productive tomato plants!\n\n🛒 [View Product](https://natureswaysoil.com/products/${tomatoProduct.slug})`;
+      response += `1️⃣ **Specialized Tomato Fertilizer** (Best Choice)\n   ${tomatoProduct.title.split('–')[0]}\n   • Formulated specifically for tomatoes\n   • Includes calcium to prevent blossom end rot\n   • B-1 Vitamin & Aloe Vera for strong roots\n   • Price: $${tomatoProduct.price}\n   🛒 [View Product](https://natureswaysoil.com/products/${tomatoProduct.slug})\n\n`;
     }
+    
+    if (generalFert) {
+      response += `2️⃣ **General Purpose Organic Fertilizer**\n   ${generalFert.title.split('/')[0]}\n   • Works great for tomatoes and all vegetables\n   • Fast absorption, easy application\n   • Made fresh weekly\n   • Price: $${generalFert.price}\n   🛒 [View Product](https://natureswaysoil.com/products/${generalFert.slug})\n\n`;
+    }
+    
+    if (pottingSoil) {
+      response += `3️⃣ **Quality Potting Soil** (For containers)\n   ${pottingSoil.title.split(',')[0]}\n   • Perfect for container tomatoes\n   • Excellent drainage and aeration\n   • Rich in organic matter\n   • Price: $${pottingSoil.price}\n   🛒 [View Product](https://natureswaysoil.com/products/${pottingSoil.slug})\n\n`;
+    }
+    
+    response += `**Pro Tips:**\n• Start with good soil and consistent watering\n• Feed regularly once plants start flowering\n• Mulch with straw or compost to retain moisture\n• Remove lower leaves to improve air circulation\n\nWhat specific aspect of tomato growing would you like to know more about?`;
+    
+    return response;
   }
 
   // Product recommendations - Houseplants
@@ -73,17 +90,50 @@ const generateResponse = (userMessage: string, products: any[]): string => {
       p.title.toLowerCase().includes('house plant') || 
       p.title.toLowerCase().includes('garden and house')
     );
+    const pottingSoil = products.find(p => p.category === 'Potting Soil' && p.title.includes('8 Quarts'));
+    const charcoal = products.find(p => p.title.toLowerCase().includes('charcoal'));
+    
+    let response = `Great question about houseplants! 🪴 Here's what indoor plants need to thrive:\n\n**Essential Care for Healthy Houseplants:**\n\n☀️ **Light Requirements**\n• Varies by plant species\n• Most need bright, indirect light\n• Rotate plants weekly for even growth\n• Watch for signs: leggy = too little, burned = too much\n\n💧 **Watering**\n• Check soil moisture before watering\n• Most prefer soil to dry slightly between waterings\n• Use room temperature water\n• Ensure pots have drainage holes\n\n🌱 **Nutrition**\n• Feed during growing season (spring/summer)\n• Reduce feeding in fall/winter\n• Liquid fertilizers absorb quickly\n• Every 2-4 weeks during active growth\n\n🪴 **Soil & Potting**\n• Well-draining potting mix essential\n• Repot when roots fill container\n• Fresh soil provides nutrients\n• Good aeration prevents root rot\n\n🌿 **Environment**\n• Most prefer 65-75°F\n• Moderate humidity (40-60%)\n• Good air circulation\n• Keep away from drafts and vents\n\n**Product Recommendations:**\n\n`;
+    
     if (houseplantProduct) {
-      return `For houseplants, our **${houseplantProduct.title}** is perfect! 🪴\n\n✨ Benefits:\n${houseplantProduct.benefits}\n\n💰 Price: $${houseplantProduct.price}\n\nIt's 100% organic with fast absorption, promoting healthy growth for all your indoor plants!\n\n🛒 [View Product](https://natureswaysoil.com/products/${houseplantProduct.slug})`;
+      response += `1️⃣ **Organic Liquid Fertilizer** (Top Choice)\n   ${houseplantProduct.title.split('/')[0]}\n   • Perfect for all houseplants\n   • Fast absorption through roots and leaves\n   • Promotes healthy, vibrant growth\n   • Easy to use - just dilute and apply\n   • Price: $${houseplantProduct.price}\n   🛒 [View Product](https://natureswaysoil.com/products/${houseplantProduct.slug})\n\n`;
     }
+    
+    if (pottingSoil) {
+      response += `2️⃣ **Premium Potting Soil**\n   ${pottingSoil.title.split(',')[0]}\n   • Ideal for repotting houseplants\n   • Excellent drainage and aeration\n   • Rich in organic nutrients\n   • Price: $${pottingSoil.price}\n   🛒 [View Product](https://natureswaysoil.com/products/${pottingSoil.slug})\n\n`;
+    }
+    
+    if (charcoal) {
+      response += `3️⃣ **Activated Charcoal**\n   ${charcoal.title.split(',')[0]}\n   • Filters toxins and impurities\n   • Prevents root rot\n   • Perfect for terrariums\n   • Improves soil drainage\n   • Price: $${charcoal.price}\n   🛒 [View Product](https://natureswaysoil.com/products/${charcoal.slug})\n\n`;
+    }
+    
+    response += `**Pro Tips:**\n• Less is more with watering - overwatering kills more plants than underwatering\n• Clean leaves monthly to improve photosynthesis\n• Group plants together to increase humidity\n• Start with easy plants like pothos, snake plants, or ZZ plants\n\nWhat type of houseplants are you growing?`;
+    
+    return response;
   }
 
   // Seed starting
   if (message.includes('seed') && (message.includes('start') || message.includes('germination'))) {
     const seedProducts = products.filter(p => p.category === 'Seed Starting Mix');
+    const generalFert = products.find(p => p.title.toLowerCase().includes('garden and house'));
+    
+    let response = `Excellent question about seed starting! 🌱 Here's everything you need for successful germination:\n\n**Complete Seed Starting Guide:**\n\n📅 **Timing**\n• Start 6-8 weeks before last frost for most vegetables\n• Check seed packet for specific timing\n• Tomatoes, peppers: 6-8 weeks\n• Lettuce, herbs: 4-6 weeks\n• Squash, cucumbers: 3-4 weeks (or direct sow)\n\n🌱 **Seed Starting Mix**\n• Use sterile seed starting mix (not garden soil)\n• Lightweight and fine texture\n• Excellent drainage prevents damping off\n• Disease-free environment\n\n💧 **Moisture**\n• Keep soil consistently moist but not waterlogged\n• Bottom watering prevents disturbing seeds\n• Mist surface gently for tiny seeds\n• Cover with humidity dome until germination\n\n☀️ **Light**\n• 12-16 hours of light daily after germination\n• Use grow lights 2-3 inches above seedlings\n• Natural sunlight often insufficient in early spring\n• Rotate trays for even growth\n\n🌡️ **Temperature**\n• Most seeds: 65-75°F for germination\n• Heat mat speeds germination\n• Cool slightly after sprouting (60-70°F)\n• Warm-season crops need warmer temps\n\n🌿 **Fertilizing**\n• Start feeding when true leaves appear\n• Use diluted liquid fertilizer (1/4 strength)\n• Feed weekly for strong growth\n• Avoid over-fertilizing young seedlings\n\n💪 **Hardening Off**\n• Gradually expose to outdoor conditions\n• Start 7-10 days before transplanting\n• Increase outdoor time daily\n• Protect from wind and direct sun initially\n\n**Recommended Products:**\n\n`;
+    
     if (seedProducts.length > 0) {
-      return `Great question about seed starting! 🌱\n\nWe have **Organic Seed Starting Mix** in multiple sizes:\n\n${seedProducts.slice(0, 3).map(p => `• ${p.title.split('-')[0].trim()} - $${p.price}`).join('\n')}\n\n**Tips for success:**\n• Keep soil consistently moist but not soggy\n• Provide 12-16 hours of light daily\n• Maintain temperature 65-75°F\n• Use our organic mix for better drainage and disease prevention\n\n🛒 [View All Seed Starting Products](https://natureswaysoil.com/products)`;
+      response += `1️⃣ **Organic Seed Starting Mix** (Essential)\n   Available in multiple sizes:\n`;
+      seedProducts.slice(0, 3).forEach((p, i) => {
+        response += `   ${i === 0 ? '•' : '•'} ${p.title.split('-')[0].trim()} - $${p.price}\n`;
+      });
+      response += `   • Sterile and disease-free\n   • Perfect drainage for healthy roots\n   • Lightweight for easy germination\n   🛒 [View All Sizes](https://natureswaysoil.com/products)\n\n`;
     }
+    
+    if (generalFert) {
+      response += `2️⃣ **Organic Liquid Fertilizer** (For feeding seedlings)\n   ${generalFert.title.split('/')[0]}\n   • Start when true leaves appear\n   • Dilute to 1/4 strength for seedlings\n   • Promotes strong, healthy growth\n   • Includes B-1 for root development\n   • Price: $${generalFert.price}\n   🛒 [View Product](https://natureswaysoil.com/products/${generalFert.slug})\n\n`;
+    }
+    
+    response += `**Common Mistakes to Avoid:**\n• Using garden soil (contains diseases)\n• Overwatering (causes damping off)\n• Insufficient light (creates leggy seedlings)\n• Planting too deep (delays germination)\n• Skipping hardening off (transplant shock)\n\n**Pro Tips:**\n• Label everything! Seeds look alike\n• Start more than you need (some won't germinate)\n• Use clean containers with drainage holes\n• Keep records of what works for next year\n\nWhat vegetables or flowers are you planning to start?`;
+    
+    return response;
   }
 
   // Potting soil
@@ -103,8 +153,8 @@ const generateResponse = (userMessage: string, products: any[]): string => {
   }
 
   // Organic gardening
-  if (message.includes('organic') && message.includes('garden')) {
-    return `Organic gardening is our passion! 🌿\n\n**Why go organic?**\n• Healthier soil ecosystem\n• No synthetic chemicals\n• Better for environment\n• Safer for family & pets\n• Tastier, more nutritious produce\n\n**Our commitment:**\n✅ 100% organic ingredients\n✅ USDA Certified Biobased\n✅ Made fresh weekly\n✅ Sustainable practices\n\nAll our products support natural, healthy plant growth. What specific aspect of organic gardening interests you?`;
+  if (message.includes('organic') && (message.includes('garden') || message.includes('grow'))) {
+    return `Organic gardening is wonderful! 🌿 Let me share the complete approach:\n\n**What is Organic Gardening?**\nGrowing plants using natural methods without synthetic chemicals, pesticides, or fertilizers. It focuses on building healthy soil and working with nature.\n\n**Core Principles:**\n\n🌱 **Build Healthy Soil**\n• Add compost and organic matter regularly\n• Feed the soil, not just the plants\n• Maintain soil pH (6.0-7.0 for most plants)\n• Encourage beneficial microorganisms\n• Use cover crops in off-season\n\n🐛 **Natural Pest Control**\n• Encourage beneficial insects (ladybugs, lacewings)\n• Companion planting (marigolds deter pests)\n• Hand-pick larger pests\n• Use neem oil or insecticidal soap\n• Row covers for physical barriers\n\n🌿 **Organic Fertilizers**\n• Compost (best all-around amendment)\n• Liquid organic fertilizers (fast-acting)\n• Worm castings (nutrient-rich)\n• Fish emulsion (nitrogen boost)\n• Bone meal (phosphorus for roots)\n• Kelp meal (trace minerals)\n\n💧 **Water Management**\n• Deep, infrequent watering\n• Mulch to retain moisture\n• Drip irrigation or soaker hoses\n• Water in morning to prevent disease\n• Collect rainwater when possible\n\n🌾 **Crop Rotation**\n• Rotate plant families yearly\n• Prevents soil depletion\n• Reduces pest and disease buildup\n• Improves soil structure\n\n🍂 **Mulching**\n• Suppresses weeds naturally\n• Retains soil moisture\n• Regulates soil temperature\n• Adds organic matter as it breaks down\n• Use straw, leaves, grass clippings, or wood chips\n\n**Benefits of Organic Gardening:**\n\n✅ **For Your Health**\n• No pesticide residues on food\n• More nutritious produce\n• Safer for children and pets\n• Better taste and flavor\n\n✅ **For the Environment**\n• Protects water quality\n• Supports pollinators and wildlife\n• Reduces carbon footprint\n• Builds sustainable ecosystems\n\n✅ **For Your Garden**\n• Healthier, more resilient plants\n• Improved soil over time\n• Natural pest balance\n• Long-term sustainability\n\n**Getting Started:**\n\n1. **Start Small** - Begin with a few containers or small bed\n2. **Test Your Soil** - Know what you're working with\n3. **Add Compost** - Foundation of organic gardening\n4. **Choose Right Plants** - Native and adapted varieties\n5. **Be Patient** - Organic methods take time but last\n\n**Our Organic Products:**\n\nAll Nature's Way Soil products are:\n✅ 100% organic ingredients\n✅ USDA Certified Biobased\n✅ Made fresh weekly\n✅ No synthetic chemicals\n✅ Sustainable and eco-friendly\n\n🛒 [View All Organic Products](https://natureswaysoil.com/products)\n\n**Common Organic Gardening Questions:**\n• "How do I deal with pests organically?"\n• "What's the best organic fertilizer?"\n• "How do I improve my soil naturally?"\n• "Can I grow organically in containers?"\n\nWhat specific aspect of organic gardening would you like to explore?`;
   }
 
   // Pricing
