@@ -3,6 +3,7 @@ import Image from 'next/image';
 import productsData from '@/data/products.json';
 import videoConfig from '@/config/videos.json';
 import AutoplayHeroVideo from '@/components/AutoplayHeroVideo';
+import EmailCaptureSection from '@/components/EmailCaptureSection';
 import type { Product } from '@/lib/cart';
 import type { LandingContent } from '@/lib/cms';
 
@@ -119,6 +120,9 @@ export default function LandingPage({ content }: { content: LandingContent }) {
                                 </p>
                                 <p className="mt-2 text-sm">Secure checkout powered by Stripe.</p>
                         </section>
+
+                        {/* Email Capture Section */}
+                        <EmailCaptureSection />
                 </>
         );
 }

@@ -5,6 +5,10 @@ import Link from 'next/link';
 import productsData from '@/data/products.json';
 import videoConfig from '@/config/videos.json';
 import ProductVideoPlayer from '@/components/ProductVideoPlayer';
+import ReviewSection from '@/components/ReviewSection';
+import UrgencyBadges from '@/components/UrgencyBadges';
+import MoneyBackGuarantee from '@/components/MoneyBackGuarantee';
+import ProductBundles from '@/components/ProductBundles';
 import type { Product } from '@/lib/cart';
 
 interface ProductPageProps {
@@ -102,6 +106,13 @@ export default function ProductPage({ product, productVideo }: ProductPageProps)
               </div>
             </div>
 
+            {/* Urgency Badges */}
+            <UrgencyBadges 
+              stockLevel="low"
+              recentPurchases={Math.floor(Math.random() * 20) + 5}
+              showFreeShipping={true}
+            />
+
             {/* Description */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-xl font-semibold mb-3">About This Product</h2>
@@ -148,6 +159,9 @@ export default function ProductPage({ product, productVideo }: ProductPageProps)
               </div>
             )}
 
+            {/* Money-Back Guarantee */}
+            <MoneyBackGuarantee />
+
             {/* Buy Now Button */}
             <div className="space-y-3">
               <Link
@@ -188,6 +202,25 @@ export default function ProductPage({ product, productVideo }: ProductPageProps)
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Product Bundles */}
+        <div className="mt-12">
+          <ProductBundles 
+            currentProduct={product}
+            relatedProducts={productsData.filter((p: Product) => 
+              p.category === product.category && p.id !== product.id && p.active
+            )}
+          />
+        </div>
+
+        {/* Customer Reviews */}
+        <div className="mt-12">
+          <ReviewSection 
+            productCategory={product.category}
+            averageRating={4.8}
+            reviewCount={127}
+          />
         </div>
 
         {/* Educational Content Section */}

@@ -1,0 +1,56 @@
+{
+  "Fertilizer": [
+    {
+      "rating": 5,
+      "title": "Amazing results in just 2 weeks!",
+      "text": "My tomato plants have never looked better. The leaves are deep green and the growth is incredible. This organic fertilizer really works!",
+      "author": "Sarah M.",
+      "verified": true,
+      "date": "2024-09-15"
+    },
+    {
+      "rating": 5,
+      "title": "Finally, an organic option that works",
+      "text": "I've tried many organic fertilizers and this is the first one that actually delivers results comparable to synthetic options. My garden is thriving!",
+      "author": "John D.",
+      "verified": true,
+      "date": "2024-09-20"
+    },
+    {
+      "rating": 4,
+      "title": "Great product, noticeable difference",
+      "text": "Used this on my vegetable garden and saw improvement within a week. Plants are healthier and producing more. Would definitely recommend.",
+      "author": "Maria G.",
+      "verified": true,
+      "date": "2024-09-25"
+    }
+  ],
+  "Soil Amendment": [
+    {
+      "rating": 5,
+      "title": "Transformed my clay soil",
+      "text": "My soil was hard as a rock. After using this amendment, it's now loose and workable. My plants are so much happier!",
+      "author": "Robert K.",
+      "verified": true,
+      "date": "2024-09-10"
+    },
+    {
+      "rating": 5,
+      "title": "Best soil conditioner I've used",
+      "text": "The biochar and humic acid really make a difference. Water retention improved dramatically and my plants are thriving.",
+      "author": "Linda P.",
+      "verified": true,
+      "date": "2024-09-18"
+    }
+  ],
+  "Compost": [
+    {
+      "rating": 5,
+      "title": "Rich, living compost",
+      "text": "You can tell this compost is alive with beneficial microbes. My garden has never been healthier. Worth every penny!",
+      "author": "David W.",
+      "verified": true,
+      "date": "2024-09-12"
+    }
+  ]
+}
