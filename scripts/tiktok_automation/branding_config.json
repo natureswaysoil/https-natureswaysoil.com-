@@ -1,0 +1,115 @@
+{
+  "branding": {
+    "logo_path": "/home/ubuntu/logo.png",
+    "brand_name": "Nature's Way Soil",
+    "tagline": "FROM OUR FARM TO YOUR GARDEN",
+    "colors": {
+      "primary": "#1a3d2e",
+      "secondary": "#6b4423",
+      "accent1": "#8bc34a",
+      "accent2": "#9ccc65",
+      "accent3": "#aed581",
+      "background": "#f5f5f0",
+      "text": "#1a3d2e",
+      "highlight": "#8bc34a"
+    },
+    "fonts": {
+      "primary": "Montserrat",
+      "secondary": "Open Sans"
+    }
+  },
+  "video_enhancements": {
+    "intro_duration": 2,
+    "outro_duration": 3,
+    "logo_position": "top-right",
+    "logo_opacity": 0.8,
+    "text_animations": true,
+    "background_music": true,
+    "captions": true,
+    "transitions": "smooth",
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920"
+  },
+  "content_strategy": {
+    "hooks": [
+      "Did you know...",
+      "Here's why your plants need...",
+      "The secret to...",
+      "Stop wasting money on...",
+      "This will transform your garden...",
+      "Professional gardeners use this...",
+      "Your plants are begging for..."
+    ],
+    "cta_templates": [
+      "Link in bio to get yours! \ud83c\udf31",
+      "Shop now at natureswaysoil.com \ud83c\udf3f",
+      "Transform your garden today! \ud83c\udf3b",
+      "Limited stock - order now! \ud83c\udf3e",
+      "Join thousands of happy gardeners! \ud83c\udf38"
+    ],
+    "hashtag_strategy": {
+      "branded": [
+        "#NaturesWaySoil",
+        "#OrganicGardening"
+      ],
+      "trending": [
+        "#GardenTok",
+        "#PlantTok",
+        "#GardeningTips"
+      ],
+      "niche": [
+        "#OrganicSoil",
+        "#HealthyPlants",
+        "#GardenLife"
+      ]
+    }
+  },
+  "video_template": {
+    "sections": [
+      {
+        "type": "intro",
+        "duration": 2,
+        "elements": [
+          "logo",
+          "brand_name",
+          "hook"
+        ]
+      },
+      {
+        "type": "problem",
+        "duration": 3,
+        "elements": [
+          "text_overlay",
+          "background_video"
+        ]
+      },
+      {
+        "type": "solution",
+        "duration": 5,
+        "elements": [
+          "product_showcase",
+          "benefits",
+          "text_overlay"
+        ]
+      },
+      {
+        "type": "proof",
+        "duration": 3,
+        "elements": [
+          "before_after",
+          "testimonial_text"
+        ]
+      },
+      {
+        "type": "outro",
+        "duration": 3,
+        "elements": [
+          "cta",
+          "logo",
+          "website",
+          "social_handles"
+        ]
+      }
+    ]
+  }
+}
