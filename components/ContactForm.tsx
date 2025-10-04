@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
