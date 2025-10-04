@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bundle_001",
+    "slug": "complete-garden-starter",
+    "title": "Complete Garden Starter Kit",
+    "description": "Everything you need to start your organic garden right! Includes our best-selling potting soil, worm castings, and mycorrhizae inoculant. Save 20% vs buying separately.",
+    "products": ["prod_001", "prod_002", "prod_003"],
+    "regularPrice": 74.97,
+    "bundlePrice": 59.99,
+    "savings": 14.98,
+    "savingsPercent": 20,
+    "active": true,
+    "image": "/images/bundle-starter.jpg",
+    "badge": "BEST VALUE",
+    "benefits": [
+      "Complete soil ecosystem in one package",
+      "Perfect for beginners",
+      "Enough for 4-6 containers or 1 raised bed",
+      "Save $14.98"
+    ]
+  },
+  {
+    "id": "bundle_002",
+    "slug": "seed-starting-bundle",
+    "title": "Seed Starting Success Bundle",
+    "description": "Give your seeds the best start! Premium seed starting mix plus mycorrhizae for explosive root growth. Perfect for spring planting season.",
+    "products": ["prod_005", "prod_003"],
+    "regularPrice": 48.98,
+    "bundlePrice": 39.99,
+    "savings": 8.99,
+    "savingsPercent": 18,
+    "active": true,
+    "image": "/images/bundle-seeds.jpg",
+    "badge": "SPRING SPECIAL",
+    "benefits": [
+      "Maximize germination rates",
+      "Stronger, healthier seedlings",
+      "Reduce transplant shock",
+      "Save $8.99"
+    ]
+  },
+  {
+    "id": "bundle_003",
+    "slug": "raised-bed-complete",
+    "title": "Raised Bed Complete Kit",
+    "description": "Transform your raised bed into a thriving garden! Includes raised bed soil mix, worm castings for ongoing nutrition, and compost tea blend for weekly feeding.",
+    "products": ["prod_006", "prod_002", "prod_004"],
+    "regularPrice": 99.97,
+    "bundlePrice": 79.99,
+    "savings": 19.98,
+    "savingsPercent": 20,
+    "active": true,
+    "image": "/images/bundle-raised-bed.jpg",
+    "badge": "MOST POPULAR",
+    "benefits": [
+      "Complete season-long nutrition",
+      "Fills one 4x8 raised bed",
+      "Weekly compost tea feeding",
+      "Save $19.98"
+    ]
+  },
+  {
+    "id": "bundle_004",
+    "slug": "pro-grower-bundle",
+    "title": "Pro Grower's Ultimate Bundle",
+    "description": "Our most comprehensive package for serious gardeners. All 6 products at maximum savings. Everything you need for a complete organic growing system.",
+    "products": ["prod_001", "prod_002", "prod_003", "prod_004", "prod_005", "prod_006"],
+    "regularPrice": 173.94,
+    "bundlePrice": 139.99,
+    "savings": 33.95,
+    "savingsPercent": 20,
+    "active": true,
+    "image": "/images/bundle-pro.jpg",
+    "badge": "BEST SAVINGS",
+    "benefits": [
+      "Complete organic growing system",
+      "Maximum 20% savings",
+      "Enough for multiple gardens",
+      "Save $33.95"
+    ]
+  }
+]

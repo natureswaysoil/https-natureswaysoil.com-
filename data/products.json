@@ -1,393 +1,112 @@
 [
   {
-    "id": "nws-001",
-    "slug": "nws-001",
-    "title": "Nature's Way Soil Organic Liquid Fertilizer for Garden and House Plants/100% Ogranic/USDA Certified Biobased Product/with B-1 Vitamin, Aloe Vera Juice to Improve Transplants/Made Fresh Weekly/",
-    "description": "Fast absorption, Promotes healthy growth, Easy application. organic, liquid fertilizer, plant care, gardening. Perfect for Home Gardeners.",
-    "price": 20.99,
+    "id": "prod_001",
+    "slug": "organic-potting-soil",
+    "title": "Organic Potting Soil",
+    "description": "Premium organic potting soil enriched with worm castings and mycorrhizae. Perfect for containers, raised beds, and indoor plants. Promotes healthy root development and vibrant growth.",
+    "price": 24.99,
     "active": true,
-    "sku": "3L-3MPJ-6BQM",
-    "asin": "B0822RH5L3",
+    "sku": "NWS-POT-001",
     "images": [
-      "/products/nws_001.jpg"
+      "/images/potting-soil.jpg"
     ],
-    "category": "Fertilizer",
-    "keywords": "organic, liquid fertilizer, plant care, gardening",
-    "benefits": "Fast absorption, Promotes healthy growth, Easy application",
-    "target_audience": "Home Gardeners"
+    "variations": [
+      {"size": "5 lbs", "price": 24.99},
+      {"size": "15 lbs", "price": 49.99},
+      {"size": "40 lbs", "price": 89.99}
+    ],
+    "benefits": ["Rich in organic matter", "Excellent drainage", "pH balanced", "Contains beneficial microbes"],
+    "category": "soil"
   },
   {
-    "id": "nws-002",
-    "slug": "nws-002",
-    "title": "Generic Horlticural Activated Charcoal for Plants, 4 Quarts, Indoor and Outdoor, Charcoal for Terrariums, Conditioning for Bonsai Soil and Catus Soil, Black, NWS-4q-ABC",
-    "description": "Improves soil drainage, Filters toxins, Long-lasting amendment. plant care. Perfect for Home Gardeners.",
-    "price": 29.99,
-    "active": true,
-    "sku": "NWS-4q-ABC",
-    "asin": "B0D52CQNGN",
-    "images": [
-      "/products/nws_002.jpg"
-    ],
-    "category": "Soil Amendment",
-    "keywords": "plant care",
-    "benefits": "Improves soil drainage, Filters toxins, Long-lasting amendment",
-    "target_audience": "Home Gardeners"
-  },
-  {
-    "id": "nws-003",
-    "slug": "nws-003",
-    "title": "Nature's Way Soil Organic Tomato Liquid Fertilizer – Made Fresh Weekly- Concentrate/Includes Vitamin B-1 and Aloe Vera for Faster Root Establishment, Healthier Transplants/Stops Blossom End Rot,",
-    "description": "Fast absorption, Promotes healthy growth, Easy application. organic, liquid fertilizer, tomato care, plant care. Perfect for Vegetable Gardeners.",
-    "price": 29.99,
-    "active": true,
-    "sku": "P5-NP0G-5SL7",
-    "asin": "B0D6886G54",
-    "images": [
-      "/products/nws_003.jpg"
-    ],
-    "category": "Fertilizer",
-    "keywords": "organic, liquid fertilizer, tomato care, plant care",
-    "benefits": "Fast absorption, Promotes healthy growth, Easy application",
-    "target_audience": "Vegetable Gardeners"
-  },
-  {
-    "id": "nws-004",
-    "slug": "nws-004",
-    "title": "Nature's Way Soil Booster and Loosener – Organic Formula to Enhance Soil Health, Improve Aeration, and Promote Root Growth – Ideal for Gardens, Lawns, and Potted Plants",
-    "description": "Loosens compacted soil, Improves drainage, Enhances root growth. organic, plant care, gardening. Perfect for Homeowners.",
-    "price": 29.99,
-    "active": true,
-    "sku": "9P-CSA1-NC45",
-    "asin": "B0D69LNC5T",
-    "images": [
-      "/products/nws_004.jpg"
-    ],
-    "category": "Soil Amendment",
-    "keywords": "organic, plant care, gardening",
-    "benefits": "Loosens compacted soil, Improves drainage, Enhances root growth",
-    "target_audience": "Homeowners"
-  },
-  {
-    "id": "nws-006",
-    "slug": "nws-006",
-    "title": "Nature’s Way Soil® Orchid & African Violet Potting Mix – Premium Coco Coir, Worm Castings, Activated Biochar & Perlite | Lightweight, Nutrient-Rich Indoor Plant Blend",
-    "description": "Enhances soil health, Natural ingredients, Sustainable gardening. plant care. Perfect for Home Gardeners.",
-    "price": 29.99,
-    "active": true,
-    "sku": "9M-TMB1-QSZJ",
-    "asin": "B0D7T3TLQP",
-    "images": [
-      "/products/nws_006.jpg"
-    ],
-    "category": "Soil Amendment",
-    "keywords": "plant care",
-    "benefits": "Enhances soil health, Natural ingredients, Sustainable gardening",
-    "target_audience": "Home Gardeners"
-  },
-  {
-    "id": "nws-011",
-    "slug": "nws-011",
-    "title": "Nature's Way Soil Organic Hydroponic Fertilizer Concentrate – Made Fresh Weekly-32 oz – Makes 512 Gallons of Nutrient Solution – Organic Plant Food for Hydroponic Systems, Aquaponics",
-    "description": "Long-lasting nutrition, Increases yield, Organic formula. organic, plant care. Perfect for Home Gardeners.",
+    "id": "prod_002",
+    "slug": "worm-castings",
+    "title": "Pure Worm Castings",
+    "description": "100% pure worm castings - nature's perfect fertilizer. Rich in nutrients, beneficial microbes, and enzymes. Gentle enough for seedlings yet powerful for mature plants.",
     "price": 19.99,
     "active": true,
-    "sku": "FR-IJ8R-6LQK",
-    "asin": "B0D9HT7ND8",
+    "sku": "NWS-WC-001",
     "images": [
-      "/products/nws_011.jpg"
+      "/images/worm-castings.jpg"
     ],
-    "category": "Fertilizer",
-    "keywords": "organic, plant care",
-    "benefits": "Long-lasting nutrition, Increases yield, Organic formula",
-    "target_audience": "Home Gardeners"
+    "variations": [
+      {"size": "2 lbs", "price": 19.99},
+      {"size": "5 lbs", "price": 39.99},
+      {"size": "15 lbs", "price": 89.99}
+    ],
+    "benefits": ["Slow-release nutrients", "Improves soil structure", "Increases water retention", "Boosts plant immunity"],
+    "category": "amendment"
   },
   {
-    "id": "nws-012",
-    "slug": "nws-012",
-    "title": "Nature’s Way Soil Dog Urine Neutralizer & Lawn Revitalizer – 32 oz/ 1 Gallon | Now with Enzymes/Pet-Safe Grass Repair Spray for Yellow Spots | Odor Eliminator & Soil Reviver for Healthy Green Lawns",
-    "description": "Enhances soil health, Natural ingredients, Sustainable gardening. gardening, organic. Perfect for Homeowners.",
+    "id": "prod_003",
+    "slug": "mycorrhizae-inoculant",
+    "title": "Mycorrhizae Inoculant",
+    "description": "Professional-grade mycorrhizal fungi blend. Establishes symbiotic relationships with plant roots, dramatically improving nutrient and water uptake. Essential for organic gardening success.",
     "price": 29.99,
     "active": true,
-    "sku": "EG-PJ13-DA9T",
-    "asin": "B0DC9CSMWS",
+    "sku": "NWS-MYC-001",
     "images": [
-      "/products/nws_012.jpg"
+      "/images/mycorrhizae.jpg"
     ],
-    "category": "Soil Amendment",
-    "keywords": "gardening, organic",
-    "benefits": "Enhances soil health, Natural ingredients, Sustainable gardening",
-    "target_audience": "Homeowners"
+    "variations": [
+      {"size": "4 oz", "price": 29.99},
+      {"size": "1 lb", "price": 79.99}
+    ],
+    "benefits": ["Increases nutrient absorption by 700%", "Improves drought resistance", "Enhances root growth", "Reduces transplant shock"],
+    "category": "amendment"
   },
   {
-    "id": "nws-013",
-    "slug": "nws-013",
-    "title": "Nature's Way Soil Enhanced Living Compost – with Fermented Duckweed Extract, 20% Worm Castings, 20% Activated BioChar, 60% Weed-Free Compost – Organic Garden Soil Amendment for Root & Plant Growth",
-    "description": "Improves soil structure, Adds nutrients, Eco-friendly. organic, plant care, gardening. Perfect for Home Gardeners.",
-    "price": 29.99,
-    "active": true,
-    "sku": "WK-558E-QZUL",
-    "asin": "B0DDCPZY3C",
-    "images": [
-      "/products/nws_013.jpg"
-    ],
-    "category": "Compost",
-    "keywords": "organic, plant care, gardening",
-    "benefits": "Improves soil structure, Adds nutrients, Eco-friendly",
-    "target_audience": "Home Gardeners"
-  },
-  {
-    "id": "nws-014",
-    "slug": "nws-014",
-    "title": "Nature’s Way Soil Hay, Pasture & Lawn Fertilizer – 1 & 2.5 Gallon Organic Liquid Soil Conditioner for Grass, Turf & Forage | Pet-Safe | Microbial Nitrogen Blend | 2.5 Gallons",
-    "description": "Fast absorption, Promotes healthy growth, Easy application. organic, liquid fertilizer. Perfect for Homeowners.",
-    "price": 99.99,
-    "active": true,
-    "sku": "N4-E00Z-BB9W",
-    "asin": "B0DFV4YZ61",
-    "images": [
-      "/products/nws_014.jpg"
-    ],
-    "category": "Fertilizer",
-    "keywords": "organic, liquid fertilizer",
-    "benefits": "Fast absorption, Promotes healthy growth, Easy application",
-    "target_audience": "Homeowners"
-  },
-  {
-    "id": "nws-015",
-    "slug": "nws-015",
-    "title": "Nature's Way Soil Hay and Pasture Liquid Fertilizer – Organic, Non-Toxic, Safe for Horses, Livestock – Promotes Healthy Growth, Nutrient-Rich Forage, and Enhanced Pasture Quality (1 Gallon)",
-    "description": "Fast absorption, Promotes healthy growth, Easy application. organic, liquid fertilizer. Perfect for Home Gardeners.",
-    "price": 39.99,
-    "active": true,
-    "sku": "VY-T7ZM-760R",
-    "asin": "B0DJ1MF2BP",
-    "images": [
-      "/products/nws_015.jpg"
-    ],
-    "category": "Fertilizer",
-    "keywords": "organic, liquid fertilizer",
-    "benefits": "Fast absorption, Promotes healthy growth, Easy application",
-    "target_audience": "Home Gardeners"
-  },
-  {
-    "id": "nws-016",
-    "slug": "nws-016",
-    "title": "Nature's Way Soil Liquid Bone Meal Fertilizer – 32 Ounce/1 Gallon Organic Phosphorus & Calcium for Healthy Roots, Flowers & Fruits – Fast-Absorbing Liquid Plant Food for Vegetables, Flowers, Trees",
-    "description": "Fast absorption, Promotes healthy growth, Easy application. organic, liquid fertilizer, plant care. Perfect for Vegetable Gardeners.",
-    "price": 19.99,
-    "active": true,
-    "sku": "B5-G9JD-1K10",
-    "asin": "B0DXP97C6F",
-    "images": [
-      "/products/nws_016.jpg"
-    ],
-    "category": "Fertilizer",
-    "keywords": "organic, liquid fertilizer, plant care",
-    "benefits": "Fast absorption, Promotes healthy growth, Easy application",
-    "target_audience": "Vegetable Gardeners"
-  },
-  {
-    "id": "nws-017",
-    "slug": "nws-017",
-    "title": "Nature’s Way Soil Spray Pattern Indicator",
-    "description": "Enhances soil health, Natural ingredients, Sustainable gardening. gardening, organic. Perfect for Home Gardeners.",
-    "price": 29.99,
-    "active": true,
-    "sku": "NWS-32-BD",
-    "asin": "B0F4NQNTSW",
-    "images": [
-      "/products/nws_017.jpg"
-    ],
-    "category": "Soil Amendment",
-    "keywords": "gardening, organic",
-    "benefits": "Enhances soil health, Natural ingredients, Sustainable gardening",
-    "target_audience": "Home Gardeners"
-  },
-  {
-    "id": "nws-018",
-    "slug": "nws-018",
-    "title": "Nature’s Way Soil® Liquid Kelp Fertilizer – 1 Gallon/Makes 1890 Gallons | Organic Seaweed Plant Food for Lawn, Garden, Flowers & Vegetables | Cold-Processed | Natural Growth Booster & Soil Revitalizer",
-    "description": "Fast absorption, Promotes healthy growth, Easy application. organic, natural, liquid fertilizer, plant care, gardening. Perfect for Homeowners.",
+    "id": "prod_004",
+    "slug": "compost-tea-blend",
+    "title": "Compost Tea Brewing Blend",
+    "description": "Specially formulated blend for brewing nutrient-rich compost tea. Contains premium compost, worm castings, kelp meal, and beneficial microbe food sources.",
     "price": 34.99,
     "active": true,
-    "sku": "8K-DBU9-JA4K",
-    "asin": "B0F8R45FJ2",
+    "sku": "NWS-CT-001",
     "images": [
-      "/products/nws_018.jpg"
+      "/images/compost-tea.jpg"
     ],
-    "category": "Fertilizer",
-    "keywords": "organic, natural, liquid fertilizer, plant care, gardening",
-    "benefits": "Fast absorption, Promotes healthy growth, Easy application",
-    "target_audience": "Homeowners"
+    "variations": [
+      {"size": "3 lbs", "price": 34.99},
+      {"size": "10 lbs", "price": 89.99}
+    ],
+    "benefits": ["Brews in 24-48 hours", "Billions of beneficial microbes", "Foliar spray or soil drench", "Organic disease suppression"],
+    "category": "amendment"
   },
   {
-    "id": "nws-019",
-    "slug": "nws-019",
-    "title": "Nature’s Way Soil® Liquid Kelp Fertilizer –2.5 Gallon/Organic Seaweed Plant Food for Lawn, Garden, Flowers & Vegetables/Concentrate | Cold-Processed | Natural Growth Booster & Soil Revitalizer",
-    "description": "Fast absorption, Promotes healthy growth, Easy application. organic, natural, liquid fertilizer, plant care, gardening. Perfect for Homeowners.",
-    "price": 64.99,
+    "id": "prod_005",
+    "slug": "seed-starting-mix",
+    "title": "Seed Starting Mix",
+    "description": "Lightweight, sterile seed starting mix designed for optimal germination. Fine texture perfect for tiny seeds. Contains coconut coir, perlite, and worm castings.",
+    "price": 18.99,
     "active": true,
-    "sku": "3L-41WW-8JVG",
-    "asin": "B0F9B4Q5Z8",
+    "sku": "NWS-SS-001",
     "images": [
-      "/products/nws_019.jpg"
+      "/images/seed-starting.jpg"
     ],
-    "category": "Fertilizer",
-    "keywords": "organic, natural, liquid fertilizer, plant care, gardening",
-    "benefits": "Fast absorption, Promotes healthy growth, Easy application",
-    "target_audience": "Homeowners"
+    "variations": [
+      {"size": "8 quarts", "price": 18.99},
+      {"size": "16 quarts", "price": 32.99}
+    ],
+    "benefits": ["Sterile - prevents damping off", "Perfect moisture retention", "Excellent aeration", "Gentle for delicate roots"],
+    "category": "soil"
   },
   {
-    "id": "nws-021",
-    "slug": "nws-021",
-    "title": "Nature's Way Soil Liquid Humic & Fulvic Acid with Organic Kelp, Concentrate,Natural Soil Conditioner, Plant Growth Stimulator, 2.5 Gallon (2.5 Gallon)",
-    "description": "Enhances soil health, Natural ingredients, Sustainable gardening. organic, natural, liquid fertilizer, plant care. Perfect for Home Gardeners.",
-    "price": 69.99,
+    "id": "prod_006",
+    "slug": "raised-bed-soil-mix",
+    "title": "Raised Bed Soil Mix",
+    "description": "Complete raised bed soil blend. Perfect ratio of compost, topsoil, and amendments. Ready to plant - no mixing required. Feeds plants for entire growing season.",
+    "price": 44.99,
     "active": true,
-    "sku": "GA-TZ69-N9XK",
-    "asin": "B0F9V3K9L7",
+    "sku": "NWS-RB-001",
     "images": [
-      "/products/nws_021.jpg"
+      "/images/raised-bed.jpg"
     ],
-    "category": "Soil Amendment",
-    "keywords": "organic, natural, liquid fertilizer, plant care",
-    "benefits": "Enhances soil health, Natural ingredients, Sustainable gardening",
-    "target_audience": "Home Gardeners"
-  },
-  {
-    "id": "nws-022",
-    "slug": "nws-022",
-    "title": "Nature's Way Soil Liquid Humic & Fulvic Acid with Organic Kelp, Concentrate, Natural Soil Conditioner, Plant Growth Stimulator, 1 Gallon",
-    "description": "Enhances soil health, Natural ingredients, Sustainable gardening. organic, natural, liquid fertilizer, plant care. Perfect for Home Gardeners.",
-    "price": 39.99,
-    "active": true,
-    "sku": "IT-ADBS-CXUC",
-    "asin": "B0F9V4HQNK",
-    "images": [
-      "/products/nws_022.jpg"
+    "variations": [
+      {"size": "1 cubic foot", "price": 44.99},
+      {"size": "2 cubic feet", "price": 79.99}
     ],
-    "category": "Soil Amendment",
-    "keywords": "organic, natural, liquid fertilizer, plant care",
-    "benefits": "Enhances soil health, Natural ingredients, Sustainable gardening",
-    "target_audience": "Home Gardeners"
-  },
-  {
-    "id": "nws-023",
-    "slug": "nws-023",
-    "title": "Nature's Way Soil Liquid Bone Meal Fertilizer – Organic Phosphorus & Calcium for Healthy Roots, Flowers & Fruits – Fast-Absorbing Liquid Plant Food for Vegetables, Flowers, Trees, and Shrubs 1 Gallon",
-    "description": "Fast absorption, Promotes healthy growth, Easy application. organic, liquid fertilizer, plant care. Perfect for Vegetable Gardeners.",
-    "price": 39.99,
-    "active": true,
-    "sku": "TY-Z0X8-ENHG",
-    "asin": "B0F9W6R4K9",
-    "images": [
-      "/products/nws_023.jpg"
-    ],
-    "category": "Fertilizer",
-    "keywords": "organic, liquid fertilizer, plant care",
-    "benefits": "Fast absorption, Promotes healthy growth, Easy application",
-    "target_audience": "Vegetable Gardeners"
-  },
-  {
-    "id": "nws-024",
-    "slug": "nws-024",
-    "title": "Nature’s Way Soil® Liquid Biochar with Kelp, Humic & Fulvic Acid – Organic Soil Conditioner for Plants, Gardens & Lawns – Boost Microbes & Nutrient Retention – 1 Gallon",
-    "description": "Enhances soil health, Natural ingredients, Sustainable gardening. organic, liquid fertilizer, plant care, gardening. Perfect for Homeowners.",
-    "price": 89.99,
-    "active": true,
-    "sku": "VH-WPH5-BD2P",
-    "asin": "B0FF98QKY7",
-    "images": [
-      "/products/nws_024.jpg"
-    ],
-    "category": "Soil Amendment",
-    "keywords": "organic, liquid fertilizer, plant care, gardening",
-    "benefits": "Enhances soil health, Natural ingredients, Sustainable gardening",
-    "target_audience": "Homeowners"
-  },
-  {
-    "id": "nws-025",
-    "slug": "nws-025",
-    "title": "Nature’s Way Soil® Liquid Kelp Fertilizer – Organic Seaweed Plant Food for Lawn, Garden, Flowers & Vegetables | Cold-Processed | Natural Growth Booster & Soil Revitalizer (32 Ounce)",
-    "description": "Fast absorption, Promotes healthy growth, Easy application. organic, natural, liquid fertilizer, plant care, gardening. Perfect for Homeowners.",
-    "price": 19.99,
-    "active": true,
-    "sku": "XX-XBWB-DF03",
-    "asin": "B0FFZPLCG7",
-    "images": [
-      "/products/nws_025.jpg"
-    ],
-    "category": "Fertilizer",
-    "keywords": "organic, natural, liquid fertilizer, plant care, gardening",
-    "benefits": "Fast absorption, Promotes healthy growth, Easy application",
-    "target_audience": "Homeowners"
-  },
-  {
-    "id": "nws-026",
-    "slug": "nws-026",
-    "title": "Nature’s Way Soil® Liquid Humic & Fulvic Acid – 32 oz Soil Conditioner with Organic Kelp – Boosts Root Growth, Water Retention & Microbial Activity – Natural Lawn & Garden Supplement – Pet-Safe",
-    "description": "Enhances soil health, Natural ingredients, Sustainable gardening. organic, natural, liquid fertilizer, gardening. Perfect for Homeowners.",
-    "price": 19.99,
-    "active": true,
-    "sku": "FP-AL1H-WYNQ",
-    "asin": "B0FFZRM6BD",
-    "images": [
-      "/products/nws_026.jpg"
-    ],
-    "category": "Soil Amendment",
-    "keywords": "organic, natural, liquid fertilizer, gardening",
-    "benefits": "Enhances soil health, Natural ingredients, Sustainable gardening",
-    "target_audience": "Homeowners"
-  },
-  {
-    "id": "nws-027",
-    "slug": "nws-027",
-    "title": "Nature’s Way Soil Dog Urine Neutral & Lawn – 1 Gallon | Pet-Safe Grass Repair Spray for Yellow Spots | Odor Eliminator & Soil Reviver for Healthy Green Lawns (1 Gallon)",
-    "description": "Enhances soil health, Natural ingredients, Sustainable gardening. gardening, organic. Perfect for Homeowners.",
-    "price": 59.99,
-    "active": true,
-    "sku": "T0-MB9Q-JIKC",
-    "asin": "B0FG38YYJ5",
-    "images": [
-      "/products/nws_027.jpg"
-    ],
-    "category": "Soil Amendment",
-    "keywords": "gardening, organic",
-    "benefits": "Enhances soil health, Natural ingredients, Sustainable gardening",
-    "target_audience": "Homeowners"
-  },
-  {
-    "id": "nws-028",
-    "slug": "nws-028",
-    "title": "Nature's Way Soil® Seaweed & Humic Acid Lawn Treatment – 32 oz Concentrate | Liquid Soil Revitalizer with 4.5% Humic + 4.5% Cold-Processed Kelp | Organic Garden & Grass Fertilizer Additive",
-    "description": "Fast absorption, Promotes healthy growth, Easy application. organic, liquid fertilizer, gardening. Perfect for Homeowners.",
-    "price": 19.99,
-    "active": true,
-    "sku": "BH-NBDZ-TCRT",
-    "asin": "B0FGWSKGCY",
-    "images": [
-      "/products/nws_028.jpg"
-    ],
-    "category": "Fertilizer",
-    "keywords": "organic, liquid fertilizer, gardening",
-    "benefits": "Fast absorption, Promotes healthy growth, Easy application",
-    "target_audience": "Homeowners"
-  },
-  {
-    "id": "nws-029",
-    "slug": "nws-029",
-    "title": "Nature's Way Soil\" Pet-Safe Kennel Cleaner & Deodorizer – Bio-Enzymatic, Non-Toxic, Odor Eliminator for Dog Kennels, Cages, Floors & Bedding – Professional Strength, Eco-Friendly, 1 Gallon",
-    "description": "Enhances soil health, Natural ingredients, Sustainable gardening. gardening, organic. Perfect for Professional Gardeners.",
-    "price": 54.99,
-    "active": true,
-    "sku": "CC-PTT2-IUMQ",
-    "asin": "B0FMQNT193",
-    "images": [
-      "/products/nws_029.jpg"
-    ],
-    "category": "Soil Amendment",
-    "keywords": "gardening, organic",
-    "benefits": "Enhances soil health, Natural ingredients, Sustainable gardening",
-    "target_audience": "Professional Gardeners"
+    "benefits": ["Complete nutrition", "Excellent drainage", "Weed-free", "Organic certified ingredients"],
+    "category": "soil"
   }
 ]
