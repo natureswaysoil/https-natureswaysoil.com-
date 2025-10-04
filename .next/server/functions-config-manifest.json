@@ -1,1 +1,1 @@
-{"version":1,"functions":{"/api/products":{},"/api/stripe/webhook":{},"/":{},"/landing":{}}}
+{"version":1,"functions":{"/api/products":{},"/blog/[slug]":{},"/blog":{},"/api/stripe/webhook":{},"/":{},"/landing":{}}}
