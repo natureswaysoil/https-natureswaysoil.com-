@@ -12,7 +12,7 @@ export default function LandingPage({ content }: { content: LandingContent }) {
         
         return (
                 <>
-                        {/* Autoplay Educational Video Hero */}
+                        {/* Autoplay Educational Video Hero - Updated Oct 4, 2025 */}
                         {heroVideo.enabled && (
                                 <AutoplayHeroVideo 
                                         videoUrl={heroVideo.url}
