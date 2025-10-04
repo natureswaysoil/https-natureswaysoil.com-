@@ -26,5 +26,168 @@
       ],
       "createdDate": "2025-10-04"
     }
+  ],
+  "productVideos": [
+    {
+      "productId": "nws-001",
+      "title": "How Organic Liquid Fertilizer Feeds Your Plants Naturally",
+      "description": "Learn how our organic liquid fertilizer works with soil microbes to provide steady, sustainable nutrition for your garden and house plants.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-002",
+      "title": "Activated Charcoal: Nature's Soil Filter and Conditioner",
+      "description": "Discover how horticultural activated charcoal improves drainage, filters toxins, and creates the perfect environment for healthy plant roots.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-003",
+      "title": "Stop Blossom End Rot: The Science Behind Tomato Nutrition",
+      "description": "Learn why tomatoes need specialized nutrition and how our organic tomato fertilizer prevents blossom end rot while promoting vigorous growth.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-004",
+      "title": "Breaking Up Compacted Soil: How Soil Looseners Work",
+      "description": "See how our organic soil booster breaks up compacted soil, improves aeration, and creates the perfect environment for healthy root development.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-006",
+      "title": "Perfect Potting Mix for Orchids and African Violets",
+      "description": "Discover why orchids and African violets need specialized growing media and how our premium blend provides the perfect balance of drainage and nutrition.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-011",
+      "title": "Hydroponic Nutrition: Organic Fertilizer for Soilless Growing",
+      "description": "Learn how our organic hydroponic fertilizer provides complete nutrition for plants growing in water-based systems and aquaponics setups.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-012",
+      "title": "Neutralizing Dog Urine Damage: The Science of Lawn Recovery",
+      "description": "Understand why dog urine burns grass and how our enzymatic formula neutralizes nitrogen damage while revitalizing your lawn naturally.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-013",
+      "title": "Living Compost: The Power of Worm Castings and Biochar",
+      "description": "Explore how our enhanced living compost combines fermented duckweed, worm castings, and activated biochar to supercharge your soil biology.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-014",
+      "title": "Organic Pasture Fertilization: Safe for Livestock and Horses",
+      "description": "Learn how our organic hay and pasture fertilizer promotes healthy forage growth while remaining completely safe for grazing animals.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-015",
+      "title": "Building Nutrient-Rich Pastures for Healthy Livestock",
+      "description": "Discover how our liquid pasture fertilizer enhances forage quality, increases nutrient density, and supports the health of horses and livestock.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-016",
+      "title": "Liquid Bone Meal: Fast-Acting Phosphorus for Blooms and Fruits",
+      "description": "See how our liquid bone meal delivers essential phosphorus and calcium for explosive flower production and abundant fruit development.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-017",
+      "title": "Spray Pattern Indicator: Precision Application Made Easy",
+      "description": "Learn how our spray pattern indicator helps you achieve even coverage and avoid over-application of fertilizers and amendments.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-018",
+      "title": "Liquid Kelp: Ocean Nutrition for Vigorous Plant Growth",
+      "description": "Discover the power of cold-processed seaweed extract and how it provides over 70 trace minerals and natural growth hormones for your plants.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-019",
+      "title": "Bulk Liquid Kelp: Professional-Grade Seaweed Fertilizer",
+      "description": "Learn how our concentrated liquid kelp provides cost-effective nutrition for larger gardens, farms, and professional landscaping operations.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-021",
+      "title": "Humic and Fulvic Acid: Unlocking Soil Nutrients",
+      "description": "Understand how humic and fulvic acids improve nutrient uptake, enhance soil structure, and stimulate beneficial microbial activity.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-022",
+      "title": "Soil Conditioning with Humic Acid and Organic Kelp",
+      "description": "See how combining humic acid with kelp creates a powerful soil conditioner that improves water retention and nutrient availability.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-023",
+      "title": "Professional Liquid Bone Meal for Maximum Yields",
+      "description": "Learn how our concentrated liquid bone meal provides the phosphorus and calcium needed for professional-grade flower and fruit production.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-024",
+      "title": "Liquid Biochar: Carbon-Based Soil Enhancement",
+      "description": "Discover how liquid biochar combined with kelp and humic acid creates long-lasting soil improvements and boosts microbial populations.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-025",
+      "title": "Starter Size Liquid Kelp for Home Gardens",
+      "description": "Perfect for beginners, learn how our 32-ounce liquid kelp provides all the benefits of seaweed fertilizer for smaller gardens and containers.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-026",
+      "title": "Compact Humic Acid Solution for Urban Gardeners",
+      "description": "Ideal for apartment and urban gardeners, see how our 32-ounce humic acid solution improves soil health in containers and small spaces.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-027",
+      "title": "Professional Dog Urine Neutralizer for Large Lawns",
+      "description": "Learn how our gallon-size formula provides cost-effective lawn recovery for pet owners with multiple dogs or larger yard areas.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-028",
+      "title": "Seaweed and Humic Acid Lawn Treatment Combo",
+      "description": "Discover how combining 4.5% humic acid with 4.5% cold-processed kelp creates the ultimate organic lawn revitalizer and grass fertilizer.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    },
+    {
+      "productId": "nws-029",
+      "title": "Bio-Enzymatic Kennel Cleaner: Safe and Effective",
+      "description": "Learn how our professional-strength, pet-safe kennel cleaner uses natural enzymes to eliminate odors and maintain a healthy environment for animals.",
+      "url": "PENDING_GENERATION",
+      "status": "pending"
+    }
   ]
 }

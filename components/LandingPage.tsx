@@ -67,23 +67,35 @@ export default function LandingPage({ content }: { content: LandingContent }) {
 
                         <main id="products" className="p-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
                                 {products.map((p) => (
-                                        <div key={p.id} className="border rounded p-4 flex flex-col">
-                                                <Image
-                                                        src={p.images[0] || '/placeholder-product.png'}
-                                                        alt={p.title}
-                                                        width={300}
-                                                        height={300}
-                                                        className="mb-2"
-                                                />
-                                                <h2 className="text-lg font-semibold mb-2">{p.title}</h2>
-                                                <p className="flex-grow">{p.description}</p>
-                                                <p className="mt-2 font-bold">${p.price.toFixed(2)}</p>
-                                                <Link
-                                                        href={`/checkout?slug=${p.slug}&qty=1`}
-                                                        className="mt-4 inline-block bg-green-600 text-white px-3 py-1 rounded text-center"
-                                                >
-                                                        Buy now
+                                        <div key={p.id} className="border rounded p-4 flex flex-col hover:shadow-lg transition-shadow">
+                                                <Link href={`/products/${p.slug}`}>
+                                                        <Image
+                                                                src={p.images[0] || '/placeholder-product.png'}
+                                                                alt={p.title}
+                                                                width={300}
+                                                                height={300}
+                                                                className="mb-2 cursor-pointer hover:opacity-90 transition-opacity"
+                                                        />
                                                 </Link>
+                                                <Link href={`/products/${p.slug}`} className="hover:text-green-600 transition-colors">
+                                                        <h2 className="text-lg font-semibold mb-2">{p.title}</h2>
+                                                </Link>
+                                                <p className="flex-grow text-sm text-gray-600">{p.description}</p>
+                                                <p className="mt-2 font-bold text-green-600">${p.price.toFixed(2)}</p>
+                                                <div className="mt-4 flex gap-2">
+                                                        <Link
+                                                                href={`/products/${p.slug}`}
+                                                                className="flex-1 inline-block bg-gray-100 text-gray-800 px-3 py-2 rounded text-center hover:bg-gray-200 transition-colors text-sm"
+                                                        >
+                                                                View Details
+                                                        </Link>
+                                                        <Link
+                                                                href={`/checkout?slug=${p.slug}&qty=1`}
+                                                                className="flex-1 inline-block bg-green-600 text-white px-3 py-2 rounded text-center hover:bg-green-700 transition-colors text-sm"
+                                                        >
+                                                                Buy Now
+                                                        </Link>
+                                                </div>
                                         </div>
                                 ))}
                         </main>
