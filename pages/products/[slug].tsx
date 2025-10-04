@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import type { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -260,9 +260,12 @@ export default function ProductPage({ product, productVideo }: ProductPageProps)
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const products: Product[] = productsData;
-  const paths = products.map((product) => ({
-    params: { slug: product.slug },
-  }));
+  // Filter out products with empty or invalid slugs
+  const paths = products
+    .filter((product) => product.slug && product.slug.trim() !== '' && product.active)
+    .map((product) => ({
+      params: { slug: product.slug },
+    }));
 
   return {
     paths,

@@ -14,6 +14,11 @@ export type Product = {
   sku: string;
   images: string[];
   variations?: { name: string; price: number }[];
+  category?: string;
+  benefits?: string;
+  target_audience?: string;
+  keywords?: string;
+  asin?: string;
 };
 export type CartItem = {
   id: string;
