@@ -4,19 +4,41 @@ export default function EmailCaptureSection() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
+    setError('');
     
-    // TODO: Integrate with your email service (Mailchimp, ConvertKit, etc.)
-    console.log('Email submitted:', email);
-    
-    setSubmitted(true);
-    setEmail('');
-    
-    // Reset after 5 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 5000);
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, source: 'email_capture_section' }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitted(true);
+        setEmail('');
+        
+        // Reset after 5 seconds
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 5000);
+      } else {
+        setError(data.error || 'Failed to subscribe. Please try again.');
+      }
+    } catch (err) {
+      setError('Network error. Please check your connection and try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -61,6 +83,11 @@ export default function EmailCaptureSection() {
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+              {error && (
+                <div className="mb-4 bg-red-500/20 border border-red-300 text-white px-4 py-3 rounded-lg text-center">
+                  {error}
+                </div>
+              )}
               <div className="flex flex-col sm:flex-row gap-3">
                 <input
                   type="email"
@@ -68,13 +95,15 @@ export default function EmailCaptureSection() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
                   required
-                  className="flex-1 px-5 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/30"
+                  disabled={isLoading}
+                  className="flex-1 px-5 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/30 disabled:bg-gray-200"
                 />
                 <button
                   type="submit"
-                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition-all transform hover:scale-105 shadow-lg"
+                  disabled={isLoading}
+                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition-all transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
-                  Subscribe
+                  {isLoading ? 'Subscribing...' : 'Subscribe'}
                 </button>
               </div>
               <p className="text-xs text-green-100 mt-4 text-center">

@@ -124,3 +124,4 @@ node_modules
 content/blog/*.md
 scripts/automation/videos/
 scripts/automation/logs/
+.env.local
